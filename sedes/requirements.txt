@@ -1,0 +1,6 @@
+numpy
+netcdf4
+cdsapi
+xlrd
+pandas
+xarray
