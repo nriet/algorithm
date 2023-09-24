@@ -7,14 +7,14 @@ LABEL version="1.0"
 ENV USERNAME nriet
 
 #创建用户
-RUN useradd -ms /bin/bash ${USERNAME}
+RUN useradd -ms /bin/bash nriet
 
-USER ${USERNAME}
+USER nriet
 
-WORKDIR /space/cmadaas/dpl/${USERNAME}
+WORKDIR /space/cmadaas/dpl/nriet
 
 #下载EC认证文件，用于人工智能算法
-COPY .cdsapirc /home/${USERNAME}/
+COPY .cdsapirc /home/nriet/
 
 COPY requirements-base.txt ./
 
@@ -24,6 +24,6 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app /space/cmadaas/dpl/${USERNAME}/app
+COPY app /space/cmadaas/dpl/nriet/app
 
-CMD ["python","/space/cmadaas/dpl/${USERNAME}/app/SEDES/code/main.py"]
+CMD ["python","/space/cmadaas/dpl/nriet/app/SEDES/code/main.py"]
