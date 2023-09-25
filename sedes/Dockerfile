@@ -14,7 +14,7 @@ WORKDIR /space/cmadaas/dpl/${USERNAME}
 
 COPY app /space/cmadaas/dpl/${USERNAME}/app
 
-RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}/app
+RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}
 
 USER ${USERNAME}
 
