@@ -25,7 +25,7 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt ;\
     python main.py 2023-08 ;\
-    pip uninstall -r requirements.txt -y
+    pip freeze | xargs pip uninstall -y
 
 #RUN userdel -r ${USERNAME}
 
