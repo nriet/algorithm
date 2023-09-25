@@ -15,6 +15,6 @@ RUN chown -R nriet:nriet /space/cmadaas/dpl/${USERNAME}/
 
 USER nriet
 
-RUN python app/SEDES/main.py 2023-08
+RUN python main.py 2023-08
 
 #CMD ["python","app/SEDES/main.py"]
