@@ -8,18 +8,18 @@ LABEL version="1.0"
 ARG USERNAME=nriet
 
 #创建用户
-RUN useradd -ms /bin/bash $USERNAME
+RUN useradd -ms /bin/bash ${USERNAME}
 
-USER $USERNAME
+USER ${USERNAME}
 
-WORKDIR /space/cmadaas/dpl/$USERNAME
+WORKDIR /space/cmadaas/dpl/${USERNAME}
 
-COPY app /space/cmadaas/dpl/$USERNAME/app
+COPY app /space/cmadaas/dpl/${USERNAME}/app
 
-RUN chown $USERNAME:$USERNAME /space/cmadaas/dpl/$USERNAME/app
+RUN chown ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}/app
 
 #下载EC认证文件，用于人工智能算法
-COPY .cdsapirc /home/$USERNAME/
+COPY .cdsapirc /home/${USERNAME}/
 
 COPY requirements.txt ./
 
