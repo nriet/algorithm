@@ -12,7 +12,7 @@ RUN useradd -ms /bin/bash ${USERNAME}
 
 WORKDIR /space/cmadaas/dpl/${USERNAME}
 
-COPY app /space/cmadaas/dpl/${USERNAME}/app
+COPY . /space/cmadaas/dpl/${USERNAME}/
 
 RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}
 
@@ -25,4 +25,4 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python","app/SEDES/main.py"]
+#CMD ["python","app/SEDES/main.py"]
