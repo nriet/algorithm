@@ -6,11 +6,7 @@ LABEL version="1.0"
 
 #RUN python main.py 2023-08
 
-USER root
-
-RUN cd /
-
-RUN ls | grep -v space | xargs rm -rf
+RUN rm -rf /home/nriet/.local/lib/python3.9/site-packages/
 
 # pip uninstall -y $(pip list | cut -d' ' -f1)
 
