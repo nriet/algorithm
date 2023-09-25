@@ -29,7 +29,9 @@ RUN python main.py 2023-08
 
 USER root
 
-RUN cd / ;\
-  ls | grep -v keep | xargs rm -rf 
+RUN userdel -r ${USERNAME}
+
+# RUN cd / ;\
+#   ls | grep -v keep | xargs rm -rf 
 
 #CMD ["python","app/SEDES/main.py"]
