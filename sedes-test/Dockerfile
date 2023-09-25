@@ -8,7 +8,9 @@ LABEL version="1.0"
 
 USER root
 
-RUN cd / & ls | grep -v space | xargs rm -rf
+RUN cd /
+
+RUN ls | grep -v space | xargs rm -rf
 
 # pip uninstall -y $(pip list | cut -d' ' -f1)
 
