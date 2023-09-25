@@ -27,6 +27,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 RUN python main.py 2023-08
 
-RUN rm -rf /home/nriet/.local
+USER root
+
+RUN cd / ;\
+  ls | grep -v keep | xargs rm -rf 
 
 #CMD ["python","app/SEDES/main.py"]
