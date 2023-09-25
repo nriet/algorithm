@@ -6,7 +6,7 @@ LABEL version="1.0"
 
 USER root
 RUN chown -R nriet:nriet /space/cmadaas/dpl/nriet/app
-USER nriet
+
 
 RUN python app/SEDES/main.py 2023-08
 
