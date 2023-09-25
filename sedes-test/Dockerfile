@@ -23,13 +23,11 @@ COPY .cdsapirc /home/${USERNAME}/
 
 COPY requirements.txt ./
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt ;\
+    python main.py 2023-08 ;\
+    pip uninstall -r requirements.txt -y
 
-RUN python main.py 2023-08
-
-USER root
-
-RUN userdel -r ${USERNAME}
+#RUN userdel -r ${USERNAME}
 
 # RUN cd / ;\
 #   ls | grep -v keep | xargs rm -rf 
