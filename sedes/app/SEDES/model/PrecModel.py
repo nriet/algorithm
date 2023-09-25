@@ -2,7 +2,7 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 import pytorch_lightning as pl
-from SEDES.model.BasicBlock import BasicBlock
+from model.BasicBlock import BasicBlock
 # from audtorch.metrics.functional import pearsonr
 class PrecModel(pl.LightningModule):
 

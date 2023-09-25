@@ -4,26 +4,25 @@ LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
 LABEL version="1.0"
 
-ENV USERNAME nriet
+#系统用户
+ARG USERNAME=nriet
 
 #创建用户
-RUN useradd -ms /bin/bash nriet
+RUN useradd -ms /bin/bash $USERNAME
 
-USER nriet
+USER $USERNAME
 
-WORKDIR /space/cmadaas/dpl/nriet
+WORKDIR /space/cmadaas/dpl/$USERNAME
+
+COPY app /space/cmadaas/dpl/$USERNAME/app
+
+RUN chown $USERNAME:$USERNAME /space/cmadaas/dpl/$USERNAME/app
 
 #下载EC认证文件，用于人工智能算法
-COPY .cdsapirc /home/nriet/
-
-COPY requirements-base.txt ./
-
-RUN pip install --no-cache-dir -r requirements-base.txt
+COPY .cdsapirc /home/$USERNAME/
 
 COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app /space/cmadaas/dpl/nriet/app
-
-CMD ["python","/space/cmadaas/dpl/nriet/app/SEDES/code/main.py"]
+CMD ["python","app/SEDES/main.py"]

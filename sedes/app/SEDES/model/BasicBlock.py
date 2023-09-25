@@ -1,5 +1,5 @@
 from torch import nn
-from SEDES.model.CBAM import Attn_Block
+from model.CBAM import Attn_Block
 
 
 class BasicBlock(nn.Module):

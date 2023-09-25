@@ -3,8 +3,10 @@
 
 
 人工智能
-python /space/cmadaas/dpl/${USERNAME}/app/SEDES/code/main.py
- 
+python app/SEDES/main.py 2023-08
+
+
+
 
 下载EC数据
 # download ec and ec_climate data
