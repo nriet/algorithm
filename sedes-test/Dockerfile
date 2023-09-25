@@ -25,7 +25,7 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN python app/SEDES/main.py 2023-08
+RUN python main.py 2023-08
 
 RUN rm -rf /home/nriet/.local
 
