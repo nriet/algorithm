@@ -4,6 +4,9 @@ LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
 LABEL version="1.0"
 
+#时间
+ARG time=2023-08
+
 #系统用户
 ARG USERNAME=nriet
 
@@ -24,12 +27,5 @@ COPY .cdsapirc /home/${USERNAME}/
 COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt ;\
-    python main.py 2023-08 ;\
+    python main.py ${time} ;\
     pip freeze | xargs pip uninstall -y
-
-#RUN userdel -r ${USERNAME}
-
-# RUN cd / ;\
-#   ls | grep -v keep | xargs rm -rf 
-
-#CMD ["python","app/SEDES/main.py"]
