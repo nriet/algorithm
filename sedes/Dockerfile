@@ -10,13 +10,13 @@ ARG USERNAME=nriet
 #创建用户
 RUN useradd -ms /bin/bash ${USERNAME}
 
-USER ${USERNAME}
-
 WORKDIR /space/cmadaas/dpl/${USERNAME}
 
 COPY app /space/cmadaas/dpl/${USERNAME}/app
 
 RUN chown ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}/app
+
+USER ${USERNAME}
 
 #下载EC认证文件，用于人工智能算法
 COPY .cdsapirc /home/${USERNAME}/
