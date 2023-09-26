@@ -16,7 +16,8 @@ COPY . /space/cmadaas/dpl/${USERNAME}/
 
 RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}
 
-RUN pip freeze > requirements.txt; \
+RUN pip install --upgrade pip; \
+    pip freeze > requirements.txt; \
     pip install --no-cache-dir -r requirements.txt 
 
 #USER ${USERNAME}
