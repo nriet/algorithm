@@ -27,3 +27,8 @@ python app/SEDES/main.py 2023-08
 #
 # # compute anomaly
 # Anomaly_process(yystart, yylast, months)
+
+
+
+
+docker run --restart=always --name='SEDES2' -d nriet/algorithm:sedes-data-2023-08 tail -f main.py
