@@ -24,4 +24,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 22
 
-CMD ["/usr/sbin/sshd" "-D"]
+CMD ["/usr/sbin/sshd","-D"]
