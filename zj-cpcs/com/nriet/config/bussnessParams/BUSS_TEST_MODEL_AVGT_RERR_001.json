@@ -1,0 +1,59 @@
+{
+	"work_flow_id":"test_model_001",
+	"buss_params_id":"BUSS_TEST_MODEL_AVGT_RERR_001",
+	"work_flow_params":[
+		{
+			"method_params":[
+				{
+					"reportTimeType": "#{reportTimeType}",
+					"forecastTime":"#{forecastTime}",
+					"timeType":"#{timeType}",
+					"startTime":"#{startTime}",
+					"endTime":"#{endTime}",
+					"element":"AVGT",
+					"eleType":"RERR",
+					"dataSource":"#{dataSource}",
+					"areaCode":"#{areaCode}",
+					"dataOutputPath": "/nfsshare/cdbdata/product/zj_cipas/TEST_ZJCC_AVGT_#{dataSource}_#{areaCode}_#{reportTimeType}_0000_PB_#{forecastTime}_#{startTime}-#{endTime}_RERR.nc",
+					"var": "avgt"
+				}
+			],
+			"subflow_inputdata_indexes":[
+				"[]"
+			]
+		},
+		{
+			"method_params":[
+				{
+					"data_output_params":[
+						{
+							"reportTimeType": "#{reportTimeType}",
+							"forecastTime":"#{forecastTime}",
+							"timeType":"#{timeType}",
+							"startTime":"#{startTime}",
+							"endTime":"#{endTime}",
+							"element":"AVGT",
+							"eleType":"RERR",
+							"dataSource":"#{dataSource}",
+							"areaCode":"#{areaCode}",
+							"logo": "True",
+							"unit": "单位:%",
+							"layers": [{"intervals": [-100, -75, -50, -25, 0, 25, 50, 75, 100],
+										"colors": [[153, 0, 204],[5, 0, 250], [0, 154, 252],[0, 255, 255], [193, 253, 254],
+											[255, 255, 131], [255, 181, 116], [249, 134, 129], [251, 2, 0], [148, 22, 10]],
+										"layer_type": "contourMap"}],
+							"shpInfo": ["province_boundary", "city_boundary", "county_boundary", "county_label"],
+							"output_img_name": "TEST_ZJCC_AVGT_#{dataSource}_#{areaCode}_#{reportTimeType}_0000_PB_#{forecastTime}_#{startTime}-#{endTime}_RERR",
+							"output_img_path": "/nfsshare/cdbdata/product/zj_cipas/",
+							"output_img_type": "png"
+						}
+					]
+				}
+			],
+			"subflow_inputdata_indexes":[
+				"[0]"
+			]
+		}
+	]
+}
+

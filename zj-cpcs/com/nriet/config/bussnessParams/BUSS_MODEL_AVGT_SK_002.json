@@ -1,0 +1,71 @@
+{
+	"work_flow_id":"model_002",
+	"buss_params_id":"BUSS_MODEL_AVGT_SK_002",
+	"work_flow_params":[
+		{
+			"method_params":[
+				{
+					"reportTimeType": "#{reportTimeType}",
+					"forecastTime":"#{forecastTime}",
+					"timeType":"#{timeType}",
+					"startTime":"#{startTime}",
+					"endTime":"#{endTime}",
+                    "element":"AVGT",
+					"eleType":"SK",
+					"dataSource":"#{dataSource}",
+					"areaCode":"#{areaCode}",
+					"dataOutputPath": "/nfsshare/cdbdata/product/zj_cipas/PREP_ZJCC_AVGT_#{dataSource}_#{areaCode}_#{reportTimeType}_0000_PB_#{forecastTime}_#{startTime}-#{endTime}_SK.nc",
+					"var": "avgt"
+				}
+			],
+			"subflow_inputdata_indexes":[
+				"[]"
+			]
+		},
+		{
+			"method_params":[
+				{
+					"data_output_params":[
+						{
+							"reportTimeType": "#{reportTimeType}",
+							"forecastTime":"#{forecastTime}",
+							"timeType":"#{timeType}",
+							"startTime":"#{startTime}",
+							"endTime":"#{endTime}",
+                    		"element":"AVGT",
+							"eleType":"SK",
+							"dataSource":"#{dataSource}",
+							"areaCode":"#{areaCode}",
+							"unit": "单位:℃",
+							"logo": "True",
+							"extendColor": "False",
+							"layers": [{"intervals": [-30, -25, -20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 38, 40],
+										 "colors": [[0,0,150],[1,1,248],[12,80,243],[1,149,255],[4,198,252],
+											[49,255,255],[152,253,254],[254,254,239],[255,255,201],
+											[255,254,66],[245,243,0],[255,192,128],[255,149,43],
+											[255,130,134],[250,2,0],[168,3,16],[104,0,23]],
+										"layer_type": "contourMap"}],
+							"layers": [{"intervals": [0,2,4,6,8,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,32,34,36,38,40],
+										"colors": [[3,3,83],[12,12,84],[24,24,102],[36,36,121],[52,52,142],
+											[72,72,165],[28,122,218],[6,140,222],[49,160,228],
+											[14,169,232],[51,183,232],[92,211,255],[128,220,254],
+											[157,228,255],[200,240,255],[137,227,191],[95,219,142],
+											[85,177,101],[113,193,106],[144,195,69],[240,227,80],
+											[237,213,125],[249,195,99],[237,156,74],[241,88,47],
+											[237,21,96],[175,8,62],[149,19,19],[155,102,172],[134,78,143]],
+										"layer_type": "contourMap"}],
+							"shpInfo": ["province_boundary", "city_boundary", "county_boundary", "county_label"],
+							"output_img_name": "PREP_ZJCC_AVGT_#{dataSource}_#{areaCode}_#{reportTimeType}_0000_PB_#{forecastTime}_#{startTime}-#{endTime}_SK_BIG",
+							"output_img_path": "/nfsshare/cdbdata/product/zj_cipas/",
+							"output_img_type": "png"
+						}
+					]
+				}
+			],
+			"subflow_inputdata_indexes":[
+				"[0]"
+			]
+		}
+	]
+}
+

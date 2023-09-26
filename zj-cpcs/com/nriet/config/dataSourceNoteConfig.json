@@ -1,0 +1,134 @@
+{
+  "NCC": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES_NCC/t2m_#YYYYMM#.nc",
+    "var": "t2m",
+    "start": "0",
+    "end": "12",
+    "title": "NCC-CSM11"
+  },
+  "UKMO5": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES_UKMO5/t2m_#YYYYMM#.nc",
+    "var": "t2m",
+    "start": "1",
+    "end": "5",
+    "title": "UKMO-GLOSEA5"
+  },
+  "CFS2": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES_CFS2/t2m_#YYYYMM#.nc",
+    "var": "t2m",
+    "start": "0",
+    "end": "9",
+    "title": "CFSv2"
+  },
+  "JMA3": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES_JMA3/t2m_#YYYYMM#.nc",
+    "var": "t2m",
+    "start": "1",
+    "end": "6",
+    "title": "JMA-CPS3"
+  },
+  "EC5": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES_EC5/t2m_#YYYYMM#.nc",
+    "var": "t2m",
+    "start": "1",
+    "end": "6",
+    "title": "ECMWF-SYSTEM5"
+  },
+  "MODES_WMME": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES_WMME/t2m_#YYYYMM#.nc",
+    "var": "t2m",
+    "start": "1",
+    "end": "5",
+    "title":"MODES-加权平均"
+  },
+  "CMMEV2MON": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMMEV2/t2m_#YYYYMM#.nc",
+    "var": "t2m",
+    "start": "1",
+    "end": "6",
+    "title": "CMMEv2"
+  },
+  "MODES_MME": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES_MME/t2m_#YYYYMM#.nc",
+    "var": "t2m",
+    "start": "1",
+    "end": "5",
+    "title":"MODES-算术平均"
+  },
+  "SEDES": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/SEDES/t2m_#YYYYMM#.nc",
+    "var": "t2m",
+    "start": "1",
+    "end": "5",
+    "title":"SEDES"
+  },
+  "ZJPPC": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/ZJPPC/pinci_#YYYYMM#.nc",
+    "var": "pinci",
+    "start": "1",
+    "end": "5"
+  },
+  "OISSTV2_SST_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/OISSTV2/sst/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/OISSTV2/sst/ltm/",
+    "var": "sst",
+    "unitConvert": ""
+  },
+  "NCEP1_HGT_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/hgt/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/hgt/ltm/",
+    "var": "hgt",
+    "unitConvert": ""
+  },
+  "NCEP1_UWND_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/uwnd/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/uwnd/ltm/",
+    "var": "uwnd",
+    "unitConvert": ""
+  },
+  "NCEP1_VWND_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/vwnd/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/vwnd/ltm/",
+    "var": "vwnd",
+    "unitConvert": ""
+  },
+  "NCEP1_WIND_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/uwnd/day/,/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/vwnd/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/uwnd/ltm/,/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/vwnd/ltm/",
+    "var": "uwnd,vwnd",
+    "unitConvert": ""
+  },
+  "CPSV3": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/BCC_CPSv3/tmp/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/BCC_CPSv3/tmp/ltm/",
+    "var": "tmp",
+    "unitConvert": "minus_273.15",
+    "start": "0",
+    "end": "59",
+    "title":"CMA-CPSv3"
+  },
+  "CFSV2": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEP/cfs_day/tmp/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEP/cfs_day/tmp/ltm/",
+    "var": "tmp",
+    "unitConvert": "minus_273.15",
+    "start": "1",
+    "end": "44",
+    "title":"CFSv2"
+  },
+  "CFSV2MON": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/CFSV2MON/t2m/#YYYY#/#YYYYMMDD#.#YYYYMM#.nc",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEP/cfs_day/tmp/ltm/",
+    "var": "t2m",
+    "unitConvert": "",
+    "start": "1",
+    "end": "1",
+    "title":"CFSv2"
+  },
+  "CLDAS_RDAY_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/CLDAS/prate/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/CLDAS/prate/ltm/",
+    "var": "prate",
+    "unitConvert": ""
+  }
+}

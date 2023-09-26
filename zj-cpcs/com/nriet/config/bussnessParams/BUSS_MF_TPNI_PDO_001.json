@@ -1,0 +1,119 @@
+{
+  "work_flow_id": "main_flow_ocean_003",
+  "buss_params_id": "BUSS_MF_TPNI_PDO_001",
+  "work_flow_params": [
+    {
+      "method_params": [
+        {
+          "bussId": "#{bussId}",
+          "elements": "sst_v5",
+          "timeType": "#{timeType}",
+          "timeRanges": "#{timeRanges}",
+          "regions": "110,260,20,70",
+          "dataInputPaths": "/nfsshare/cdbdata/data/NOAA/sst_v5/#{timeType}/",
+          "levels": "",
+          "ltmDataInputPaths": "/nfsshare/cdbdata/data/NOAA/sst_v5/ltm/",
+          "unitConvert": "",
+          "ltm": "#{ltm}"
+        },
+        {
+          "inputData": "0.skData",
+          "inputData2": "0.ltmData"
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[]",
+        "[0]"
+      ]
+    },
+    {
+      "method_params": [
+        {
+          "bussId": "",
+          "elements": "sst_v5",
+          "timeType": "#{timeType}",
+          "timeRanges": "#{timeRanges}",
+          "regions": "0,360,-90,90",
+          "dataInputPaths": "/nfsshare/cdbdata/data/NOAA/sst_v5/#{timeType}/",
+          "levels": "",
+          "ltmDataInputPaths": "/nfsshare/cdbdata/data/NOAA/sst_v5/ltm/",
+          "unitConvert": "",
+          "ltm": "#{ltm}"
+        },
+        {
+          "inputData": "2.skData",
+          "inputData2": "2.ltmData"
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[]",
+        "[2]"
+      ]
+    },
+    {
+      "method_params": [
+        {
+          "inputData": "1.skData",
+          "inputData2": "3.skData"
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[1,3]"
+      ]
+    },
+    {
+      "method_params": [
+        {
+          "dataInputPaths": "/nfsshare/cdbdata/data/NOAA/sst_v5/ltm/sstv5_mon_eof1_pdo_#{ltm}.nc",
+          "regions": "110,260,20,70"
+        },
+        {
+          "inputData": "4.skData",
+          "inputData2": "5.skData",
+          "bussSource": "SSTV5_PDO"
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[]",
+        "[4,5]"
+      ]
+    },
+    {
+      "method_params": [
+        {
+          "timeType": "mon",
+          "convertTimeType": "#{DBtimeType}",
+          "inputData": "6.skData"
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[6]"
+      ]
+    },
+    {
+      "method_params": [
+        {
+          "productId": "BUSS_MF_TPNI_PDO_#{ltm}_001",
+          "productName": "海温指数监测-SST-PDO",
+          "productType": "INDEX_MOP",
+          "indexTitle": "'PDO'",
+          "timeType": "#{DBtimeType}",
+          "DBtimeType": "#{DBtimeType}",
+          "timeRanges": "",
+          "reportingTime": "",
+          "forecastPeriod": "",
+          "elements": "",
+          "dataSource": "NOAA_SSTv5",
+          "areaCode": "PAC",
+          "levels": "0000",
+          "format": "2",
+          "saveType": "round",
+          "data_type": "#{data_type}"
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[7]"
+      ]
+    }
+  ]
+}

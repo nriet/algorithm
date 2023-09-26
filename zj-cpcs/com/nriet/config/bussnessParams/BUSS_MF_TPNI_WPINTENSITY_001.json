@@ -1,0 +1,55 @@
+{
+	"work_flow_id":"main_flow_ocean_005",
+	"buss_params_id":"BUSS_MF_TPNI_WPINTENSITY_001",
+	"work_flow_params":[
+		{
+            "method_params": [
+                {
+                    "bussId": "#{bussId}",
+                    "elements": "sst",
+                    "timeType": "#{timeType}",
+                    "timeRanges": "#{timeRanges}",
+                    "regions": "120,180,-30,30",
+                    "dataInputPaths": "/nfsshare/cdbdata/data/NOAA/sst/#{timeType}/",
+                    "unitConvert": ""
+                }
+            ],
+            "subflow_inputdata_indexes": [
+              "[]"
+            ]
+        },
+		{
+			"method_params":[
+				{
+					"inputData":"0.skData",
+					"gridDistance":"0.25",
+					"R":"6300"
+				}
+			],
+			"subflow_inputdata_indexes":[
+				"[0]"
+			]
+		},
+		{
+			"method_params":[
+				{
+					"productId":"BUSS_MF_TPNI_WPINTENSITY_001",
+					"productName":"西太平洋暖池-强度指数",
+					"productType":"INDEX_MOP",
+					"indexTitle":"'WPINTENSITY'",
+					"timeType":"#{timeType}",
+					"DBtimeType":"#{DBtimeType}",
+					"elements":"",
+					"dataSource":"NOAA_OISSTv2",
+					"areaCode":"WPAC",
+					"levels":"0000",
+					"format":"2",
+					"saveType":"round"
+				}
+			],
+			"subflow_inputdata_indexes":[
+				"[1]"
+			]
+		}
+	]
+}

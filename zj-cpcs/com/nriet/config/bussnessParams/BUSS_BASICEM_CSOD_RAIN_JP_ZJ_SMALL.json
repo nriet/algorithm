@@ -1,0 +1,144 @@
+{
+  "work_flow_id": "main_flow_basicem_gbase_pb_003_small",
+  "buss_params_id": "BUSS_BASICEM_CSOD_RAIN_JP_ZJ_SMALL",
+  "work_flow_params": [
+    {
+      "method_params": [
+        {
+          "stationType": "1",
+          "areaCode": "33"
+        },
+        {
+          "dataSource": "CSOD",
+          "elements": "RAIN",
+          "areaCode": "33",
+          "stationType": "1",
+          "statisticType": "SUM",
+          "timeType": "#{timeType}",
+          "timeRanges": "#{timeRanges}",
+          "eleType": "SK",
+          "unitConvert": ""
+        },
+        {
+          "elements": "rain",
+          "statDims": "['time']",
+          "statTypes": "['sum']",
+          "inputData": "1.skData",
+          "statRanges": "[':']",
+          "statLogicalValue": ""
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[]",
+        "[0]",
+        "[1]"
+      ]
+    },
+    {
+      "method_params": [
+        {
+          "stationType": "1",
+          "areaCode": "33"
+        },
+        {
+          "dataSource": "CSOD",
+          "elements": "RAIN",
+          "areaCode": "33",
+          "stationType": "1",
+          "statisticType": "SUM",
+          "timeType": "#{timeType}",
+          "timeRanges": "#{timeRanges}",
+          "eleType": "LTM",
+          "unitConvert": ""
+        },
+        {
+          "elements": "rain",
+          "statDims": "['time']",
+          "statTypes": "['sum']",
+          "inputData": "4.skData",
+          "statRanges": "[':']",
+          "statLogicalValue": ""
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[]",
+        "[3]",
+        "[4]"
+      ]
+    },
+    {
+        "method_params":[
+            {
+                "inputData":"2.skData",
+                "inputData2":"5.skData"
+            }
+        ],
+        "subflow_inputdata_indexes":[
+            "[2,5]"
+        ]
+    },
+    {
+        "method_params":[
+            {
+                "inputData":"6.skDat6a",
+                "inputData2":"0.skData",
+                "lats":"27,32,51",
+                "lons":"117,123,61",
+                "interpolationMethod":"idw"
+            }
+        ],
+        "subflow_inputdata_indexes":[
+            "[6,0]"
+        ]
+    },
+    {
+      "method_params": [
+        {
+          "inputData": "7.skData",
+          "inputData2": "",
+          "inputData3": "",
+          "inputData4": "",
+          "outPutPath": "/nfsshare/cdbdata/product/zj_cipas/",
+          "outPutName": "MOP_ZJCC_RAIN_CSOD_#{areaCode}_#{timeType}_0000_PB_@002_SE_timeRanges@_JP.nc",
+          "data_dims": "['rain']"
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[7]"
+      ]
+    },
+    {
+        "method_params":[
+            {
+                "data_output_params":[
+                    {
+                        "main_title": "降水距平百分率分布图",
+                        "sub_titles": "['@014_SE_timeRanges@']",
+                        "areaCode":"#{areaCode}",
+                        "unit": "单位:%",
+                        "data_source": "CSOD",
+                        "logo": "True",
+                        "barShow": "False",
+                        "layers": [{"intervals": [-100, -75, -50, -25, 0, 25, 50, 75, 100],
+                                    "colors": [[148, 22, 10], [251, 2, 0], [249, 134, 129], [255, 181, 116],
+                                          [255, 255, 131],[193, 253, 254],[0, 255, 255],[0, 154, 252],
+                                          [12, 80, 243],[2, 0, 150]],
+                                    "layer_type": "contourMap"}],
+                        "layers": [{"intervals": [-80,-50,-20,0,20,50,100,200,300],
+                                    "colors": [[177,9,9,255],[221,83,30],[236,152,0],[254,217,99],[151,232,173],
+                                      [154,196,220],[116,163,226],[59,126,219],[27,68,159],[2,12,100]],
+                                    "layer_type": "contourMap"}],
+                        "shpInfo": ["province_boundary", "city_boundary", "county_boundary", "county_label"],
+                        "output_img_name": "MOP_ZJCC_RAIN_CSOD_#{areaCode}_#{timeType}_0000_PB_@002_SE_timeRanges@_JP",
+                        "output_img_path": "/nfsshare/cdbdata/product/zj_cipas/",
+                        "output_img_type": "png"
+                    }
+                ]
+            }
+        ],
+        "subflow_inputdata_indexes":[
+            "[7]"
+        ]
+    }
+  ]
+}

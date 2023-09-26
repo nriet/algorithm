@@ -1,0 +1,89 @@
+{
+  "work_flow_id": "main_flow_dqhl_ao_001",
+  "buss_params_id": "BUSS_MF_EWI_AAO_001",
+  "work_flow_params": [
+    {
+      "method_params": [
+        {
+          "bussId": "#{bussId}",
+          "elements": "hgt",
+          "timeType": "#{timeType}",
+          "timeRanges": "#{timeRanges}",
+          "levels": "700,700",
+          "regions": "0,360,-90,-20",
+          "dataInputPaths": "/nfsshare/cdbdata/data/NCEPRA/pressure/hgt/#{timeType}/",
+          "ltmDataInputPaths": "/nfsshare/cdbdata/data/NCEPRA/pressure/hgt/ltm/",
+          "ltm": "#{ltm}",
+          "unitConvert": ""
+        },
+        {
+          "inputData": "",
+          "inputData2": "",
+          "elements": "hgt"
+        },
+        {
+          "elements": "hgt",
+          "statDims": "['level']",
+          "statTypes": "['avg']",
+          "inputData": "",
+          "statRanges": "[':']",
+          "statLogicalValue": ""
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[]",
+        "[0]",
+        "[1]"
+      ]
+    },
+    {
+      "method_params": [
+        {
+          "inputData": "",
+          "patternPath": "/nfsshare/cdbdata/data/NCEPRA/pressure/hgt/ltm/cli_ao_pattern.nc",
+          "areaCode": "AAO"
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[2]"
+      ]
+    },
+    {
+      "method_params": [
+        {
+          "timeType": "#{timeType}",
+          "convertTimeType": "#{DBtimeType}",
+          "inputData": "3.skData"
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[3]"
+      ]
+    },
+    {
+      "method_params": [
+        {
+          "productId": "BUSS_MF_EWI_AAO_#{ltm}_001",
+          "productName": "南极涛动指数（NCEP）",
+          "productType": "INDEX_MOP",
+          "timeType": "#{DBtimeType}",
+          "indexTitle": "'AAO'",
+          "DBtimeType": "#{DBtimeType}",
+          "timeRanges": "",
+          "reportingTime": "",
+          "forecastPeriod": "",
+          "elements": "",
+          "dataSource": "NCEP",
+          "areaCode": "AAO",
+          "levels": "0700",
+          "format": "2",
+          "saveType": "round",
+          "data_type": "#{data_type}"
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[4]"
+      ]
+    }
+  ]
+}

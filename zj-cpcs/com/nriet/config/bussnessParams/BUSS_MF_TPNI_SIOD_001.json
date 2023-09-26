@@ -1,0 +1,97 @@
+{
+  "work_flow_id": "main_flow_ocean_002",
+  "buss_params_id": "BUSS_MF_TPNI_SIOD_001",
+  "work_flow_params": [
+    {
+      "method_params": [
+        {
+          "bussId": "#{bussId}",
+          "elements": "sst",
+          "timeType": "#{timeType}",
+          "timeRanges": "#{timeRanges}",
+          "regions": "45,110,-45,-15",
+          "dataInputPaths": "/nfsshare/cdbdata/data/NOAA/sst/#{timeType}/",
+          "ltmDataInputPaths": "/nfsshare/cdbdata/data/NOAA/sst/ltm/",
+          "unitConvert": "",
+          "ltm": "#{ltm}"
+        },
+        {
+          "inputData": "0.skData",
+          "inputData2": "0.ltmData",
+          "elements": "sst"
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[]",
+        "[0]"
+      ]
+    },
+    {
+      "method_params": [
+        {
+          "elements": "sst",
+          "statDims": "['lat','lon']",
+          "statTypes": "['avg','avg']",
+          "inputData": "1.skData",
+          "statRanges": "[[-45,-30],[45,75]]",
+          "statLogicalValue": ""
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[1]"
+      ]
+    },
+    {
+      "method_params": [
+        {
+          "elements": "sst",
+          "statDims": "['lat','lon']",
+          "statTypes": "['avg','avg']",
+          "inputData": "1.skData",
+          "statRanges": "[[-25,-15],[80,100]]",
+          "statLogicalValue": ""
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[1]"
+      ]
+    },
+    {
+      "method_params": [
+        {
+          "inputData": "2.skData",
+          "inputData2": "3.skData",
+          "elements": "sst"
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[2,3]"
+      ]
+    },
+    {
+      "method_params": [
+        {
+          "productId": "BUSS_MF_TPNI_SIOD_#{ltm}_001",
+          "productName": "海温指数监测-SST-SIOD",
+          "productType": "INDEX_MOP",
+          "indexTitle": "'SIOD'",
+          "timeType": "#{timeType}",
+          "DBtimeType": "#{timeType}",
+          "timeRanges": "#{timeRanges}",
+          "reportingTime": "",
+          "forecastPeriod": "",
+          "elements": "",
+          "dataSource": "NOAA_SSTv5",
+          "areaCode": "IO",
+          "levels": "0000",
+          "format": "2",
+          "saveType": "round",
+          "data_type": "#{data_type}"
+        }
+      ],
+      "subflow_inputdata_indexes": [
+        "[4]"
+      ]
+    }
+  ]
+}

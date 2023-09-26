@@ -1,0 +1,362 @@
+{
+  "参数描述":{
+    "label": "掩膜文件中掩膜图层的唯一标识key",
+    "name": "掩膜文件中掩膜图层的唯一标识value",
+    "y1": "两行标题时主标题距离绘图上边的偏离度，数值越大越偏上",
+    "y2": "两行标题时次标题距离绘图上边的偏离度，数值越大越偏上",
+    "y3": "三行标题时主标题距离绘图上边的偏离度，数值越大越偏上",
+    "y4": "三行标题时次标题距离绘图上边的偏离度，数值越大越偏上",
+    "regions": "绘图范围",
+    "shpFile": "掩膜用的文件位置",
+    "shp": {
+      "boundary1": {
+        "shpFile": "叠加的shp1文件位置",
+        "shpColor": "shp1线的颜色",
+        "shpThick": "shp1线的粗细"
+      },
+      "boundary2": {
+        "shpFile": "叠加的shp2文件位置（可无限叠加）",
+        "shpColor": "shp2线的颜色",
+        "shpThick": "shp2线的粗细"
+      },
+      "river": {
+        "shpFile": "叠加的河流文件位置",
+        "shpColor": "河流的颜色",
+        "shpThick": "河流的粗细"
+      },
+      "lake": {
+        "shpFile": "叠加的湖泊文件位置",
+        "shpColor": "湖泊的颜色"
+      }
+    }
+  },
+  "ZJ": {
+    "name": "浙江省",
+    "regions": "117.8,123,27,31.4",
+    "label": "FNAME",
+    "loc": "lower right",
+    "y1": "1.05",
+    "y2": "0.93",
+    "y3": "1.7",
+    "y4": "0.96",
+    "shpFile": "/Users/tanjie/Downloads/国睿科技/浙江省气候中心/算法/zj_fengxian/13ZHEJIANG/1/ZJ_province1",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/Users/tanjie/Downloads/国睿科技/浙江省气候中心/算法/zj_fengxian/13ZHEJIANG/1/ZJ_province1",
+        "shpColor": "black",
+        "shpThick": "1.5"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/13ZHEJIANG/2/zj_city_2022",
+        "shpColor": "black",
+        "shpThick": "1.0"
+      },
+      "boundary3": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/13ZHEJIANG/2/zj_country_2022",
+        "shpColor": "black",
+        "shpThick": "0.5"
+      },
+      "river": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/13ZHEJIANG/3/浙江省八大水系",
+        "shpColor": "#0EBEFE",
+        "shpThick": "2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/13ZHEJIANG/6/浙江县区_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "15",
+        "x_sub": [-0.1,-0.1,0.06,0.05,0],
+        "y_sub": [0,-0.1,0,0,-0.04],
+        "cityName": ["柯桥","萧山","滨江","上城","路桥"]
+      }
+    }
+  },
+  "33": {
+    "name": "浙江省",
+    "regionType": "1",
+    "logo_x": "118",
+    "logo_y": "27.2",
+    "regions": "117.8,123,27,31.4",
+    "label": "FNAME",
+    "barloc": "0.86,0.22,0.02,0.35",
+    "barlabel": "122.5,29.45",
+    "datasource": "122.9,31.18",
+    "note": "122.9,31.05",
+    "y1": "1.05",
+    "y2": "0.93",
+    "y3": "1.08",
+    "y4": "0.95",
+    "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/省/province/ZJ_province1",
+    "shpInfo": {
+      "province_boundary": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/省/province/ZJ_province1",
+        "shpColor": "black",
+        "shpThick": "1.5"
+      },
+      "city_boundary": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/省/city/zj_city_2022",
+        "shpColor": "black",
+        "shpThick": "1.5"
+      },
+      "county_boundary": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/省/county/zj_county_2022",
+        "shpColor": "gray",
+        "shpThick": "0.5"
+      },
+      "river": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/省/river/浙江省八大水系",
+        "shpColor": "#0EBEFE",
+        "shpThick": "2"
+      },
+      "province_label": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/省/province_label/province_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "30"
+      },
+      "city_label": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/省/city_label/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "30",
+        "x_sub": [-0.5],
+        "y_sub": [-0.3],
+        "cityName": ["杭州市"]
+      },
+      "county_label": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/省/county_label/浙江县区_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "15",
+        "x_sub": [-0.1,-0.1,0.06,0.05,0],
+        "y_sub": [0,-0.1,0,0,-0.04],
+        "cityName": ["柯桥","萧山","滨江","上城","路桥"]
+      }
+    }
+  },
+  "3301": {
+    "name": "杭州市",
+    "regionType": "2",
+    "logo_x": "118.7",
+    "logo_y": "29.5",
+    "regions": "118.2,120.8,29.0,30.7",
+    "label": "FNAME",
+    "barloc": "0.87,0.39,0.015,0.28",
+    "barlabel": "120.55,30.02",
+    "datasource": "120.75,30.6",
+    "note": "120.75,30.52",
+    "y1": "1.065",
+    "y2": "0.93",
+    "y3": "1.10",
+    "y4": "0.95",
+    "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/市/杭州市/city/杭州市_line",
+    "shpInfo": {
+      "city_boundary": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/市/杭州市/city/杭州市_line",
+        "shpColor": "black",
+        "shpThick": "1.5"
+      },
+      "county_boundary": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/市/杭州市/county/杭州区县线集合",
+        "shpColor": "black",
+        "shpThick": "1.5"
+      },
+      "city_label": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/市/杭州市/city_label/杭州市名",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "25"
+      },
+      "county_label": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/市/杭州市/county_label/杭州区县标注",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "22",
+        "x_sub": [0.02,0.02],
+        "y_sub": [0,-0.02],
+        "cityName": ["滨江","上城"]
+      }
+    }
+  },
+  "330102": {
+    "name": "上城区",
+    "regionType": "3",
+    "logo_x": "118.7",
+    "logo_y": "29.5",
+    "regions": "120.1,120.3,30.18,30.4",
+    "label": "FNAME",
+    "barloc": "0.87,0.31,0.015,0.23",
+    "barlabel": "120.28,30.275",
+    "datasource": "120.295,30.39",
+    "note": "120.295,30.385",
+    "y1": "1.04",
+    "y2": "0.92",
+    "y3": "1.06",
+    "y4": "0.935",
+    "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/上城区/county/上城区_line",
+    "shpInfo": {
+      "county_boundary": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/上城区/county/上城区_line",
+        "shpColor": "black",
+        "shpThick": "1.5"
+      },
+      "county_label": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/上城区/county_label/上城区",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "30"
+      }
+    }
+  },
+  "330105": {
+    "name": "拱墅区",
+    "regionType": "3",
+    "logo_x": "118.7",
+    "logo_y": "29.5",
+    "regions": "120.07,120.23,30.25,30.41",
+    "label": "FNAME",
+    "barloc": "0.87,0.1,0.015,0.3",
+    "barlabel": "120.215,30.318",
+    "datasource": "120.228,30.405",
+    "note": "120.228,30.401",
+    "y1": "1.045",
+    "y2": "0.93",
+    "y3": "1.065",
+    "y4": "0.95",
+    "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/拱墅区/county/拱墅区_line",
+    "shpInfo": {
+      "county_boundary": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/拱墅区/county/拱墅区_line",
+        "shpColor": "black",
+        "shpThick": "1.5"
+      },
+      "county_label": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/拱墅区/county_label/拱墅区",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "30"
+      }
+    }
+  },
+  "330106": {
+    "name": "西湖区",
+    "regionType": "3",
+    "logo_x": "118.7",
+    "logo_y": "29.5",
+    "regions": "119.98,120.20,30.07,30.37",
+    "label": "FNAME",
+    "barloc": "0.87,0.14,0.015,0.3",
+    "barlabel": "120.18,30.193",
+    "datasource": "120.195,30.363",
+    "note": "120.195,30.358",
+    "y1": "1.03",
+    "y2": "0.92",
+    "y3": "1.05",
+    "y4": "0.935",
+    "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/西湖区/county/西湖区_line",
+    "shpInfo": {
+      "county_boundary": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/西湖区/county/西湖区_line",
+        "shpColor": "black",
+        "shpThick": "1.5"
+      },
+      "county_label": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/西湖区/county_label/西湖区",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "30"
+      }
+    }
+  },
+  "330108": {
+    "name": "滨江区",
+    "regionType": "3",
+    "logo_x": "118.7",
+    "logo_y": "29.5",
+    "regions": "120.1,120.25,30.13,30.25",
+    "label": "FNAME",
+    "barloc": "0.87,0.25,0.015,0.3",
+    "barlabel": "120.236,30.19",
+    "datasource": "120.248,30.245",
+    "note": "120.248,30.241",
+    "y1": "1.05",
+    "y2": "0.93",
+    "y3": "1.08",
+    "y4": "0.95",
+    "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/滨江区/county/滨江区_line",
+    "shpInfo": {
+      "county_boundary": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/滨江区/county/滨江区_line",
+        "shpColor": "black",
+        "shpThick": "1.5"
+      },
+      "county_label": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/滨江区/county_label/滨江区",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "30"
+      }
+    }
+  },
+  "330109": {
+    "name": "萧山区",
+    "regionType": "3",
+    "logo_x": "118.7",
+    "logo_y": "29.5",
+    "regions": "120.04,120.72,29.82,30.33",
+    "label": "FNAME",
+    "barloc": "0.87,0.30,0.015,0.3",
+    "barlabel": "120.655,30.1",
+    "datasource": "120.71,30.31",
+    "note": "120.71,30.295",
+    "y1": "1.055",
+    "y2": "0.93",
+    "y3": "1.08",
+    "y4": "0.95",
+    "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/萧山区/county/萧山区_line",
+    "shpInfo": {
+      "county_boundary": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/萧山区/county/萧山区_line",
+        "shpColor": "black",
+        "shpThick": "1.5"
+      },
+      "county_label": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/萧山区/county_label/萧山区",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "30"
+      }
+    }
+  },
+  "330110": {
+    "name": "余杭区",
+    "regionType": "3",
+    "logo_x": "118.7",
+    "logo_y": "29.5",
+    "regions": "119.66,120.19,30.14,30.59",
+    "label": "FNAME",
+    "barloc": "0.87,0.2,0.015,0.3",
+    "barlabel": "120.145,30.345",
+    "datasource": "120.18,30.57",
+    "note": "120.18,30.555",
+    "y1": "1.055",
+    "y2": "0.93",
+    "y3": "1.08",
+    "y4": "0.95",
+    "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/余杭区/county/余杭区_line",
+    "shpInfo": {
+      "county_boundary": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/余杭区/county/余杭区_line",
+        "shpColor": "black",
+        "shpThick": "1.5"
+      },
+      "county_label": {
+        "shpFile": "/nfsshare/cdbdata/product/jtan/zj_shp/县/杭州市/余杭区/county_label/余杭区",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "40"
+      }
+    }
+  }
+}

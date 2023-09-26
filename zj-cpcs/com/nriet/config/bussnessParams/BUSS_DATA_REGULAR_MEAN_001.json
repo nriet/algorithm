@@ -1,0 +1,21 @@
+{
+	"work_flow_id":"main_flow_data_regular_mean_001",
+	"buss_params_id":"BUSS_DATA_REGULAR_MEAN_001",
+	"work_flow_params":[
+		{
+			"method_params":[
+				{
+                    "elements":"#{elements}",
+					"timeType":"#{timeType}",
+					"timeRanges":"#{timeRanges}",
+					"dataSources":"#{dataSources}",
+					"levelType":"#{levelType}"
+				}
+			],
+			"subflow_inputdata_indexes":[
+				"[]"
+			]
+		}
+		
+	]
+}

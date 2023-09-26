@@ -1,0 +1,132 @@
+{
+  "NCC_AVGT": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES/NCC/mon/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES/NCC/ltm/",
+    "var": "t2m",
+    "unitConvert": "minus_273.15",
+    "start": "0",
+    "end": "12"
+  },
+  "UKMO5_AVGT": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES/UKMO5/mon/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES/UKMO5/ltm/",
+    "var": "t2m",
+    "unitConvert": "minus_273.15",
+    "start": "1",
+    "end": "5"
+  },
+  "CFS2_AVGT": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES/CFS2/mon/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES/CFS2/ltm/",
+    "var": "t2m",
+    "unitConvert": "minus_273.15",
+    "start": "0",
+    "end": "9"
+  },
+  "JMA3_AVGT": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES/JMA3/mon/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES/JMA3/ltm/",
+    "var": "t2m",
+    "unitConvert": "minus_273.15",
+    "start": "1",
+    "end": "6"
+  },
+  "EC5_AVGT": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES_EC5/t2m_#YYYYMM#.nc",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES/EC5/ltm/",
+    "var": "t2m",
+    "unitConvert": "minus_273.15",
+    "start": "1",
+    "end": "6"
+  },
+  "MODES_WMME_AVGT": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES_WMME/t2m_#YYYYMM#.nc",
+    "var": "t2m",
+    "start": "1",
+    "end": "5"
+  },
+  "CMMEV2MON_AVGT": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMMEV2/t2m_#YYYYMM#.nc",
+    "var": "t2m",
+    "start": "1",
+    "end": "6"
+  },
+  "MODES_MME_AVGT": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/MODES_MME/t2m_#YYYYMM#.nc",
+    "var": "t2m",
+    "start": "1",
+    "end": "5"
+  },
+  "SEDES_AVGT": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/SEDES/t2m_#YYYYMM#.nc",
+    "var": "t2m",
+    "start": "1",
+    "end": "5"
+  },
+  "ZJPPC_AVGT": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/ZJPPC/pinci_#YYYYMM#.nc",
+    "var": "pinci",
+    "start": "1",
+    "end": "5"
+  },
+  "OISSTV2_SST_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/OISSTV2/sst/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/OISSTV2/sst/ltm/",
+    "var": "sst",
+    "unitConvert": ""
+  },
+  "NCEP1_HGT_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/hgt/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/hgt/ltm/",
+    "var": "hgt",
+    "unitConvert": ""
+  },
+  "NCEP1_UWND_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/uwnd/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/uwnd/ltm/",
+    "var": "uwnd",
+    "unitConvert": ""
+  },
+  "NCEP1_VWND_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/vwnd/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/vwnd/ltm/",
+    "var": "vwnd",
+    "unitConvert": ""
+  },
+  "NCEP1_WIND_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/uwnd/day/,/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/vwnd/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/uwnd/ltm/,/nfsshare/cdbdata/data/zj_data/NCEPRA/pressure/vwnd/ltm/",
+    "var": "uwnd,vwnd",
+    "unitConvert": ""
+  },
+  "CPSV3_AVGT_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/BCC_CPSv3/tmp/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/BCC_CPSv3/tmp/ltm/",
+    "var": "tmp",
+    "unitConvert": "minus_273.15",
+    "start": "0",
+    "end": "59"
+  },
+  "CFSV2_AVGT_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEP/cfs_day/tmp/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEP/cfs_day/tmp/ltm/",
+    "var": "tmp",
+    "unitConvert": "minus_273.15",
+    "start": "1",
+    "end": "44"
+  },
+  "CFSV2MON_AVGT_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/CFSV2MON/t2m/#YYYY#/#YYYYMMDD#.#YYYYMM#.nc",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/NCEP/cfs_day/tmp/ltm/",
+    "var": "t2m",
+    "unitConvert": "",
+    "start": "1",
+    "end": "1"
+  },
+  "CLDAS_RDAY_DAY": {
+    "dataInputPath": "/nfsshare/cdbdata/data/zj_data/CLDAS/prate/day/",
+    "ltmDataInputPath": "/nfsshare/cdbdata/data/zj_data/CLDAS/prate/ltm/",
+    "var": "prate",
+    "unitConvert": ""
+  }
+}

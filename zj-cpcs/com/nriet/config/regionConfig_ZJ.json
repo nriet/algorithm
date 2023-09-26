@@ -1,0 +1,910 @@
+{
+  "参数描述":{
+    "label": "掩膜文件中掩膜图层的唯一标识key",
+    "name": "掩膜文件中掩膜图层的唯一标识value",
+    "y1": "两行标题时主标题距离绘图上边的偏离度，数值越大越偏上",
+    "y2": "两行标题时次标题距离绘图上边的偏离度，数值越大越偏上",
+    "y3": "三行标题时主标题距离绘图上边的偏离度，数值越大越偏上",
+    "y4": "三行标题时次标题距离绘图上边的偏离度，数值越大越偏上",
+    "regions": "绘图范围",
+    "shpFile": "掩膜用的文件位置",
+    "shp": {
+      "boundary1": {
+        "shpFile": "叠加的shp1文件位置",
+        "shpColor": "shp1线的颜色",
+        "shpThick": "shp1线的粗细"
+      },
+      "boundary2": {
+        "shpFile": "叠加的shp2文件位置（可无限叠加）",
+        "shpColor": "shp2线的颜色",
+        "shpThick": "shp2线的粗细"
+      },
+      "river": {
+        "shpFile": "叠加的河流文件位置",
+        "shpColor": "河流的颜色",
+        "shpThick": "河流的粗细"
+      },
+      "lake": {
+        "shpFile": "叠加的湖泊文件位置",
+        "shpColor": "湖泊的颜色"
+      }
+    }
+  },
+  "JS": {
+    "name": "江苏省",
+    "label": "Name",
+    "y1": "1.04",
+    "y2": "0.92",
+    "y3": "1.6",
+    "y4": "0.95",
+    "regions": "116,122.5,30.5,35.5",
+    "shpFile": "./resourceConfig/shp/01JIANGSU/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "./resourceConfig/shp/01JIANGSU/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "./resourceConfig/shp/01JIANGSU/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      }
+    }
+  },
+  "JS": {
+    "name": "江苏省",
+    "label": "Name",
+    "y1": "1.04",
+    "y2": "0.92",
+    "y3": "1.6",
+    "y4": "0.95",
+    "regions": "116,122.5,30.5,35.5",
+    "shpFile": "./resourceConfig/shp/01JIANGSU/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "./resourceConfig/shp/01JIANGSU/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "./resourceConfig/shp/01JIANGSU/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      }
+    }
+  },
+  "HLJ": {
+    "name": "黑龙江省",
+    "label": "Name",
+    "regions": "121,135.5,43,55.5",
+    "loc": "lower left",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/02HEILONGJIANG/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/02HEILONGJIANG/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/02HEILONGJIANG/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/02HEILONGJIANG/6/city_point",
+        "shpColor": "black",
+        "labelSize": "25",
+        "shpThick": "0.8"
+      },
+      "river": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/02HEILONGJIANG/3/river_polyline",
+        "shpColor": "#0EBEFE",
+        "shpThick": "5"
+      }
+    }
+  },
+  "JL": {
+    "name": "吉林省",
+    "label": "Name",
+    "regions": "121,131.5,40,48",
+    "loc": "lower left",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/03JILIN/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/03JILIN/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/03JILIN/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/03JILIN/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "20"
+      }
+    }
+  },
+  "LN": {
+    "name": "辽宁省",
+    "label": "Name",
+    "regions": "118.5,126,38.4,44.5",
+    "loc": "lower left",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/04LIAONING/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/04LIAONING/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/04LIAONING/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/04LIAONING/6/city_labels",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "20"
+      }
+    }
+  },
+  "GD": {
+    "name": "广东省",
+    "label": "省区",
+    "regions": "109,117.5,20,27",
+    "loc": "lower left",
+    "logo_pad": "140",
+    "y1": "1.04",
+    "y2": "0.92",
+    "y3": "1.6",
+    "y4": "0.95",
+    "shpFile": "./resourceConfig/shp/15GUANGDONG/1/广东省",
+    "shp": {
+      "boundary1": {
+        "shpFile": "./resourceConfig/shp/15GUANGDONG/1/广东/BOUL_S",
+        "shpColor": "black",
+        "shpThick": "3",
+        "encoding": "utf-8"
+      },
+      "boundary2": {
+        "shpFile": "./resourceConfig/shp/15GUANGDONG/2/GD_Cities_Border",
+        "shpColor": "black",
+        "shpThick": "1.5"
+      },
+      "hax": {
+        "shpFile": "./resourceConfig/shp/15GUANGDONG/1/广东/HAX",
+        "shpColor": "#0EBEFE",
+        "shpThick": "2",
+        "encoding": "utf-8"
+      },
+      "river1": {
+        "shpFile": "./resourceConfig/shp/15GUANGDONG/1/广东/HYDL",
+        "shpColor": "#0EBEFE",
+        "shpThick": "1",
+        "encoding": "utf-8"
+      },
+      "river2": {
+        "shpFile": "./resourceConfig/shp/15GUANGDONG/1/广东/HYDL_2",
+        "shpColor": "#0EBEFE",
+        "shpThick": "1.2",
+        "encoding": "utf-8"
+      },
+      "river3": {
+        "shpFile": "./resourceConfig/shp/15GUANGDONG/1/广东/HYDL_3",
+        "shpColor": "#0EBEFE",
+        "shpThick": "1.5"
+      },
+      "lake": {
+        "shpFile": "./resourceConfig/shp/15GUANGDONG/1/广东/HYDA",
+        "shpColor": "#0EBEFE",
+        "shpThick": "0.8",
+        "encoding": "utf-8"
+      }
+    }
+  },
+  "HEB": {
+    "name": "河北省",
+    "label": "Name",
+    "regions": "113,120,35.5,43.5",
+    "loc": "lower right",
+    "logo_pad": "110",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/05HEBEI/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/05HEBEI/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/05HEBEI/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/05HEBEI/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "30"
+      }
+    }
+  },
+  "HEN": {
+    "name": "河南省",
+    "label": "Name",
+    "regions": "110,117,31,37.5",
+    "loc": "lower left",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/06HENAN/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/06HENAN/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/06HENAN/2/city_polygon",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/06HENAN/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "x_sub": [0.17],
+        "y_sub": [-0.08],
+        "cityName": ["安阳"],
+        "labelSize": "20"
+      }
+    }
+  },
+  "AREA": {
+    "name": "[吉林省,黑龙江省,海南省,四川省,重庆市,云南省,江苏省,安徽省,湖北省,江西省,湖南省,浙江省,贵州省]",
+    "regions": "70,140,15,55",
+    "label": "行政区划_c",
+    "shpFile": "./shp/china/分省",
+    "shp": {
+      "boundary1": {
+        "shpFile": "./shp/china/分省",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "river": {
+        "shpFile": "./shp/HYDL",
+        "shpColor": "blue",
+        "shpThick": "1"
+      },
+      "lake": {
+        "shpFile": "./shp/HYDA",
+        "shpColor": "#0EBEFE",
+        "shpThick": "0.8"
+      }
+    }
+  },
+  "QH": {
+    "name": "青海省",
+    "label": "Name",
+    "regions": "88.5,104,31,41.5",
+    "loc": "lower left",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/20QINHAI/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/20QINHAI/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/20QINHAI/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/20QINHAI/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "20"
+      }
+    }
+  },
+  "NX": {
+    "name": "宁夏回族自治区",
+    "label": "Name",
+    "regions": "104,108,35,40",
+    "loc": "lower left",
+    "logo_pad": "100",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/24NINXIA/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/24NINXIA/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/24NINXIA/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/24NINXIA/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "25"
+      }
+    }
+  },
+  "ZJ": {
+    "name": "浙江省",
+    "regions": "117.5,123,27,31.4",
+    "label": "FNAME",
+    "loc": "lower right",
+    "y1": "1.05",
+    "y2": "0.93",
+    "y3": "1.7",
+    "y4": "0.96",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/13ZHEJIANG/new/1/ZJ_province1",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/13ZHEJIANG/new/1/ZJ_province1",
+        "shpColor": "black",
+        "shpThick": "1.5"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/13ZHEJIANG/new/2/zj_city_2022",
+        "shpColor": "black",
+        "shpThick": "1.0",
+        "encoding": "utf-8"
+      },
+      "boundary3": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/13ZHEJIANG/new/2/zj_country_2022",
+        "shpColor": "black",
+        "shpThick": "0.5",
+        "encoding": "utf-8"
+      },
+      "river": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/13ZHEJIANG/new/3/浙江省八大水系",
+        "shpColor": "#0EBEFE",
+        "shpThick": "2",
+        "encoding": "utf-8"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/13ZHEJIANG/new/6/浙江县区_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "15",
+        "x_sub": [-0.1,-0.1,0.06,0.05,0],
+        "y_sub": [0,-0.1,0,0,-0.04],
+        "cityName": ["柯桥","萧山","滨江","上城","路桥"]
+      }
+    }
+  },
+  "HUN": {
+    "name": "湖南省",
+    "regions": "108,115,24.4,31",
+    "label": "Name",
+    "loc": "lower left",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/08HUNAN/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/08HUNAN/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/08HUNAN/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/08HUNAN/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "20"
+      }
+    }
+  },
+  "SH": {
+    "name": "上海市",
+    "regions": "120.7,122.5,30.5,32.2",
+    "label": "Name",
+    "loc": "lower right",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/30SHANGHAI/1/上海",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/30SHANGHAI/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/30SHANGHAI/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      }
+    }
+  },
+  "GZ": {
+    "name": "贵州省",
+    "regions": "103,110,24,30.5",
+    "label": "Name",
+    "loc": "lower left",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/19GUIZHOU/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/19GUIZHOU/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/19GUIZHOU/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/19GUIZHOU/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "20"
+      }
+    }
+  },
+  "JX": {
+    "name": "江西省",
+    "regions": "112.87165,119.06952,23.97861,31.2513369",
+    "label": "Name",
+    "loc": "lower right",
+    "logo_pad": "100",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/22JIANGXI/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/22JIANGXI/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/22JIANGXI/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/22JIANGXI/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "23"
+      }
+    }
+  },
+  "SD": {
+    "name": "山东省",
+    "regions": "114.16964,122.95089,33.95982,39.35714",
+    "label": "Name",
+    "loc": "lower right",
+    "logo_pad": "150",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/09SHANDONG/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/09SHANDONG/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/09SHANDONG/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/09SHANDONG/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "18"
+      }
+    }
+  },
+  "XJ": {
+    "name": "新疆维吾尔自治区",
+    "regions": "71.61671,99.16707,33.00891,52.90006",
+    "label": "Name",
+    "loc": "lower right",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/25XINJIANG/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/25XINJIANG/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/25XINJIANG/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/25XINJIANG/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "x_sub": [0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        "y_sub": [0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,-0.7,-0.7,0.3],
+        "cityName": ["和田地区","喀什地区","克孜勒苏柯尔克孜自治州","阿克苏地区","巴音郭楞蒙古自治州","吐鲁番","哈密","克拉玛依","阿勒泰地区","博尔塔拉蒙古自治州","伊犁哈萨克自治州","乌鲁木齐","石河子","昌吉回族自治州"],
+        "labelSize": "20"
+      }
+    }
+  },
+  "AH": {
+    "name": "安徽省",
+    "regions": "114.5,120.11742,28.91009,35.5",
+    "label": "Name",
+    "loc": "lower left",
+    "logo_pad": "110",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/12ANHUI/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/12ANHUI/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/12ANHUI/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/12ANHUI/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "23"
+      }
+    }
+  },
+  "FJ": {
+    "name": "福建省",
+    "regions": "115,121,23,28.7",
+    "label": "行政区划_c",
+    "y1": "1.04",
+    "y2": "0.92",
+    "y3": "1.6",
+    "y4": "0.95",
+    "shpFile": "./resourceConfig/shp/province/fujian/layer1/福建省",
+    "shp": {
+      "boundary1": {
+        "shpFile": "./resourceConfig/shp/province/fujian/layer1/福建省",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "./resourceConfig/shp/province/fujian/layer2/福建省",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      }
+    }
+  },
+  "GS": {
+    "name": "甘肃省",
+    "regions": "91,109.49508,31.57167,45.63318",
+    "label": "Name",
+    "loc": "lower left",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/21GANSU/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/21GANSU/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/21GANSU/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/21GANSU/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "x_sub": [0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        "y_sub": [0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.15,0.2,0.2,0.2,0.2,0.2,0.2],
+        "cityName": ["酒泉","嘉峪关","张掖","金昌","武威","白银","兰州","临夏回族自治州","定西","甘南藏族自治州","陇南","天水","平凉","庆阳"],
+        "labelSize": "20"
+      }
+    }
+  },
+  "GX": {
+    "name": "广西壮族自治区",
+    "regions": "104,112.593792833,20.7554913631,27.6855449954",
+    "label": "Name",
+    "loc": "lower left",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/27GUANGXI/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/27GUANGXI/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/27GUANGXI/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/27GUANGXI/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "20"
+      }
+    }
+  },
+  "HAN": {
+    "name": "海南省",
+    "regions": "108.2430359,111.494920265,17.9337082417,20.7783357686",
+    "label": "Name",
+    "regions_type": "s",
+    "loc": "lower right",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/16HAINAN/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/16HAINAN/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/16HAINAN/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/16HAINAN/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "20"
+      }
+    }
+  },
+  "NMG": {
+    "name": "内蒙古自治区",
+    "regions": "96,127,35.2139593727,56.9702659735",
+    "label": "Name",
+    "loc": "lower right",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/23NEIMENGGU/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/23NEIMENGGU/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/23NEIMENGGU/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/23NEIMENGGU/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "x_sub": [0,0,0,0,0,0,0,0,0,0,0,0],
+        "y_sub": [0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,-0.6],
+        "cityName": ["阿拉善盟","乌海","巴彦淖尔","鄂尔多斯","包头","乌兰察布","锡林郭勒盟","赤峰","通辽","呼伦贝尔","兴安盟行政公署","呼和浩特"],
+        "labelSize": "20"
+      }
+    }
+  },
+  "SXTY": {
+    "name": "山西省",
+    "regions": "109,115.5,34.2,41.5",
+    "label": "Name",
+    "loc": "lower right",
+    "logo_pad": "100",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/10SHANXITY/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/10SHANXITY/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/10SHANXITY/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/10SHANXITY/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "23"
+      }
+    }
+  },
+  "SXXA": {
+    "name": "陕西省",
+    "regions": "104.129439038,113.576556076,31.1291266538,41.2829017271",
+    "label": "Name",
+    "loc": "lower right",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/11SHANXIXA/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/11SHANXIXA/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/11SHANXIXA/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/11SHANXIXA/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "20"
+      }
+    }
+  },
+  "SC": {
+    "name": "四川省",
+    "regions": "96.2067054247,109.705575084,25.1178763894,36.8070855194",
+    "label": "Name",
+    "loc": "lower right",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/17SICHUAN/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/17SICHUAN/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/17SICHUAN/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/17SICHUAN/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "18"
+      }
+    }
+  },
+  "XZ": {
+    "name": "西藏自治区",
+    "regions": "77,99.9323665544,25.6545112982,40",
+    "label": "Name",
+    "loc": "lower left",
+    "logo_pad": "140",
+    "y1": "1.04",
+    "y2": "0.92",
+    "y3": "1.6",
+    "y4": "0.95",
+    "shpFile": "./resourceConfig/shp/26XIZANG/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "./resourceConfig/shp/26XIZANG/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "./resourceConfig/shp/26XIZANG/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "./resourceConfig/shp/26XIZANG/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "x_sub": [0,0,0,0,0,0,0],
+        "y_sub": [0.2,0.2,0.2,0.2,0.2,0.2,0.2],
+        "cityName": ["阿里地区","那曲地区","日喀则","拉萨","山南","林芝","昌都"],
+        "labelSize": "20"
+      }
+    }
+  },
+  "YN": {
+    "name": "云南省",
+    "regions": "96.5,106.5,20.4406772846,30.5",
+    "label": "Name",
+    "loc": "lower left",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/18YUNNAN/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/18YUNNAN/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/18YUNNAN/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/18YUNNAN/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "labelSize": "20"
+      }
+    }
+  },
+  "BJ": {
+    "name": "北京市",
+    "regions": "115.183750664,117.708017058,39.2451276914,41.4098675567",
+    "label": "Name",
+    "regions_type": "s",
+    "loc": "lower right",
+    "logo_pad": "130",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/28BEIJING/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/28BEIJING/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/28BEIJING/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/28BEIJING/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "x_sub": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.04,0.06],
+        "y_sub": [0.03,0.03,0.03,0.03,0.03,0.03,0.03,0.03,0.03,0.03,0.03,-0.06,0.03,0.03,0.03,-0.06],
+        "cityName": ["房山区","门头沟区","大兴区","通州区","平谷区","密云区","怀柔区","延庆区","昌平区","顺义区","朝阳区","丰台区","石景山区","海淀区","西城区","东城区"],
+        "labelSize": "20"
+      }
+    }
+  },
+  "TJ": {
+    "name": "天津市",
+    "regions": "116.6,118.2,38.5,40.4",
+    "regions_type": "s",
+    "label": "Name",
+    "logo_pad": "110",
+    "loc": "lower right",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/29TIANJIN/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/29TIANJIN/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/29TIANJIN/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/29TIANJIN/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "x_sub": [0,0,0,0,0,0,0,0.06,0,-0.06,0,-0.06,0,0.02,0.05,-0.06],
+        "y_sub": [0.02,-0.04,-0.04,-0.04,0.02,0.02,0.02,0.01,0.02,-0.01,-0.04,0.01,0.02,0.02,0.01,-0.02],
+        "cityName": ["静海区","滨海新区","西青区","津南区","武清区","宝坻区","宁河区","东丽区","蓟州区","南开区","河西区","红桥区","北辰区","河北区","河东区","和平区"],
+        "labelSize": "20"
+      }
+    }
+  },
+  "CQ": {
+    "name": "重庆市",
+    "regions": "104.728274258,110.658799174,27.7683033468,33.2491296377",
+    "label": "Name",
+    "loc": "lower right",
+    "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/31CHONGQING/1/province_polyline",
+    "shp": {
+      "boundary1": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/31CHONGQING/1/province_polyline",
+        "shpColor": "black",
+        "shpThick": "3"
+      },
+      "boundary2": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/31CHONGQING/2/city_polyline",
+        "shpColor": "black",
+        "shpThick": "1.2"
+      },
+      "point": {
+        "shpFile": "/nfsshare/cdbdata/algorithm/conductor/WMFS/EXTPRE/ysq/map/shp_province/31CHONGQING/6/city_point",
+        "shpColor": "black",
+        "shpThick": "0.8",
+        "x_sub": [0,-0.1,0,-0.18,0.18,-0.15,0.22,0.18],
+        "y_sub": [-0.12,-0.12,-0.12,-0.02,-0.03,0.06,-0.02,0.04],
+        "cityName": ["武隆区","九龙坡区","巴南区","璧山区","南岸区","沙坪坝区","大渡口区","渝中区"],
+        "labelSize": "16"
+      }
+    }
+  }
+}
