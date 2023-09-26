@@ -16,12 +16,17 @@ COPY . /space/cmadaas/dpl/${USERNAME}/
 
 RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}
 
+RUN pip install --upgrade pip; \
+    pip install pipreqs; \
+    pipreqs .;\
+    cat requirements.txt 
+
 #USER ${USERNAME}
 
-COPY requirements.txt ./
+#COPY requirements.txt ./
 
-RUN pip install --no-cache-dir -r requirements.txt 
+#RUN pip install --no-cache-dir -r requirements.txt 
 
-EXPOSE 22
+#EXPOSE 22
 
-CMD ["/usr/sbin/sshd","-D"]
+#CMD ["/usr/sbin/sshd","-D"]
