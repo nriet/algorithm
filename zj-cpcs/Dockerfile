@@ -16,7 +16,8 @@ COPY . /space/cmadaas/dpl/${USERNAME}/
 
 RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}
 
-RUN pip install --upgrade pip; \
+RUN rm -rf requirements.txt ; \
+    pip install --upgrade pip; \
     pip install pipreqs; \
     pipreqs .;\
     cat requirements.txt 
