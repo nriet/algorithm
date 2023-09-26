@@ -16,8 +16,12 @@ COPY . /space/cmadaas/dpl/${USERNAME}/
 
 RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}
 
-USER ${USERNAME}
+#USER ${USERNAME}
 
 COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt 
+
+EXPOSE 22
+
+CMD ["/usr/sbin/sshd" "-D"]
