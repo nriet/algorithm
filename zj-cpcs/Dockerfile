@@ -16,15 +16,15 @@ COPY . /space/cmadaas/dpl/${USERNAME}/
 
 RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}
 
-# RUN pip install --upgrade pip; \
+RUN find . -type d -exec sh -c "pipreqs {} --force" \;
 #     pip freeze > requirements.txt; \
 #     pip install --no-cache-dir -r requirements.txt 
 
 #USER ${USERNAME}
 
-COPY requirements.txt ./
+#COPY requirements.txt ./
 
-RUN pip install --no-cache-dir -r requirements.txt 
+#RUN pip install --no-cache-dir -r requirements.txt 
 
 #EXPOSE 22
 
