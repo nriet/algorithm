@@ -10,7 +10,7 @@ ARG USERNAME=BEHZ_QHZX_ZJCMPS
 #创建用户
 RUN useradd -ms /bin/bash ${USERNAME}
 
-RUN echo '${USERNAME}:password' | chpasswd
+#RUN echo 'BEHZ_QHZX_ZJCMPS:password' | chpasswd
 
 # 改变用户的UID和GID
 # RUN usermod -u 1000 ${USERNAME} && usermod -G 1000 ${USERNAME}
