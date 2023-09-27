@@ -10,7 +10,7 @@ ARG USERNAME=BEHZ_QHZX_ZJCMPS
 #创建用户
 RUN useradd -ms /bin/bash ${USERNAME}
 
-RUN echo "${USERNAME}:1" | nriet
+RUN echo '${USERNAME}:password' | chpasswd
 
 RUN adduser ${USERNAME} sudo
 
