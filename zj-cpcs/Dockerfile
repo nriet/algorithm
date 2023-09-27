@@ -27,7 +27,7 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-USER ${USERNAME}
+#USER ${USERNAME}
 
 # 开放 SSH 服务器端口
 EXPOSE 22
