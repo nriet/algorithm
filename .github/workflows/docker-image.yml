@@ -45,9 +45,9 @@ jobs:  # workflow中的job
       #     push: true
       #     tags: nriet/restcloud:2.5-slim-buster-zj-climate-miniconda
           
-      - name: algorithm:zj-cpcs-python3
+      - name: algorithm:behz_qhzx_zjcmps-zj-cpcs-debian-python3.9-slim
         uses: docker/build-push-action@v2 # docker build  & push
         with:
           context: zj-cpcs/.
           push: true
-          tags: nriet/algorithm:zj-cpcs-python3
+          tags: nriet/algorithm:behz_qhzx_zjcmps-zj-cpcs-debian-python3.9-slim

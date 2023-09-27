@@ -1,4 +1,4 @@
-FROM nriet/kylin10:v1.0
+FROM python:3.9-slim
 
 LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
@@ -15,6 +15,11 @@ WORKDIR /space/cmadaas/dpl/${USERNAME}
 COPY . /space/cmadaas/dpl/${USERNAME}/
 
 RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}
+
+RUN apt-get update \
+      && apt-get install -y --no-install-recommends \
+        libgeos-dev; \
+    rm -rf /var/lib/apt/lists/*
 
 # RUN pip install pipreqs ;\
 #     find . -type d -exec sh -c "pipreqs {} --force" \;
