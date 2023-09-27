@@ -10,7 +10,7 @@ ARG USERNAME=BEHZ_QHZX_ZJCMPS
 #创建用户
 RUN useradd -ms /bin/bash ${USERNAME}
 
-#RUN echo 'BEHZ_QHZX_ZJCMPS:password' | nriet123
+RUN echo '${USERNAME}:' | chpasswd
 
 # 改变用户的UID和GID
 # RUN usermod -u 1000 ${USERNAME} && usermod -G 1000 ${USERNAME}
@@ -43,6 +43,6 @@ RUN adduser ${USERNAME} sudo
 # RUN pip install --upgrade pip; \
 #     pip install --no-cache-dir -r requirements.txt 
 
-#EXPOSE 22
+EXPOSE 22
 
-#CMD ["/usr/sbin/sshd","-D"]
+CMD ["/usr/sbin/sshd", "-D"]
