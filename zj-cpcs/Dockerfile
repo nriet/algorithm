@@ -21,7 +21,6 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-#USER ${USERNAME}
 
 COPY user_init.sh /
 
@@ -32,6 +31,8 @@ RUN ./user_init.sh ${USERNAME} 1001 nriet123
 COPY com /space/cmadaas/dpl/${USERNAME}/com
 
 RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}/com
+
+USER ${USERNAME}
 
 # 开放 SSH 服务器端口
 EXPOSE 22
