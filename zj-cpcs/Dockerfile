@@ -25,7 +25,7 @@ RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}
 
 RUN apt-get update \
       && apt-get install -y --no-install-recommends \
-        libgeos-dev sudo; \
+        libgeos-dev sudo openssh-server; \
     rm -rf /var/lib/apt/lists/*
 
 # RUN pip install pipreqs ;\
