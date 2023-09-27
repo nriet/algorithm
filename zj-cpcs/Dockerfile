@@ -1,11 +1,11 @@
-FROM python:3.9-slim
+FROM nriet/kylin10:v1.0
 
 LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
 LABEL version="1.0"
 
 #系统用户
-ARG USERNAME=nriet
+ARG USERNAME=BEHZ_QHZX_ZJCMPS
 
 #创建用户
 RUN useradd -ms /bin/bash ${USERNAME}
@@ -24,10 +24,10 @@ RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}
 
 #USER ${USERNAME}
 
-COPY requirements.txt ./
+#COPY requirements.txt ./
 
-RUN pip install --upgrade pip; \
-    pip install --no-cache-dir -r requirements.txt 
+# RUN pip install --upgrade pip; \
+#     pip install --no-cache-dir -r requirements.txt 
 
 #EXPOSE 22
 
