@@ -17,11 +17,6 @@ RUN mkdir /var/run/sshd_config
 
 RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
 
-COPY user_init.sh /
-
-RUN chmod 755 /user_init.sh
-
-RUN ./user_init.sh ${USERNAME} 1001 nriet123
 
 COPY requirements.txt ./
 
@@ -29,11 +24,15 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 #USER ${USERNAME}
 
+COPY user_init.sh /
+
+RUN chmod 755 /user_init.sh
+
 RUN ./user_init.sh ${USERNAME} 1001 nriet123
 
 COPY com /space/cmadaas/dpl/${USERNAME}/com
 
-RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}
+RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}/com
 
 # 开放 SSH 服务器端口
 EXPOSE 22
