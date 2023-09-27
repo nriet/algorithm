@@ -4,6 +4,7 @@ LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
 LABEL version="1.0"
 
+ENV LANG C.UTF-8
 #系统用户
 ARG USERNAME=BEHZ_QHZX_ZJCMPS
 
