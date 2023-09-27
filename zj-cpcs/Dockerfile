@@ -10,7 +10,7 @@ ARG USERNAME=BEHZ_QHZX_ZJCMPS
 #创建用户
 RUN useradd -ms /bin/bash ${USERNAME}
 
-#RUN echo 'BEHZ_QHZX_ZJCMPS:password' | chpasswd
+#RUN echo 'BEHZ_QHZX_ZJCMPS:nriet123' | chpasswd
 
 # 改变用户的UID和GID
 # RUN usermod -u 1000 ${USERNAME} && usermod -G 1000 ${USERNAME}
@@ -45,4 +45,4 @@ RUN adduser ${USERNAME} sudo
 
 EXPOSE 22
 
-CMD ["/usr/sbin/sshd", "-D"]
+CMD ["/etc/init.d/ssh start", "-D"]
