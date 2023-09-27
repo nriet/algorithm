@@ -7,10 +7,12 @@ LABEL version="1.0"
 #系统用户
 ARG USERNAME=BEHZ_QHZX_ZJCMPS
 
-# 添加用户：赋予sudo权限，指定密码
-RUN useradd -ms /bin/bash ${USERNAME} \
-    && adduser ${USERNAME} sudo \
-    && echo "${USERNAME}:1" | nriet
+#创建用户
+RUN useradd -ms /bin/bash ${USERNAME}
+
+RUN echo "${USERNAME}:1" | nriet
+
+RUN adduser ${USERNAME} sudo
 
 # 改变用户的UID和GID
 # RUN usermod -u 1000 ${USERNAME} && usermod -G 1000 ${USERNAME}
