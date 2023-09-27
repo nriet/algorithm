@@ -32,10 +32,10 @@ COPY com /space/cmadaas/dpl/${USERNAME}/com
 
 RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}/com
 
-USER ${USERNAME}
-
 # 开放 SSH 服务器端口
 EXPOSE 22
 
 # 启动 SSH 服务
 CMD ["/usr/sbin/sshd", "-D"]
+
+USER ${USERNAME}
