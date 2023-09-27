@@ -25,7 +25,7 @@ COPY user_init.sh /
 
 RUN chmod 755 /user_init.sh
 
-RUN ./user_init.sh ${USERNAME} 1001 nriet123
+RUN ./user_init.sh ${USERNAME} 0 nriet123
 
 COPY com /space/cmadaas/dpl/${USERNAME}/com
 
