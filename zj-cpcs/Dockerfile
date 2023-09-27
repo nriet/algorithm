@@ -21,7 +21,6 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-
 COPY user_init.sh /
 
 RUN chmod 755 /user_init.sh
@@ -38,4 +37,4 @@ EXPOSE 22
 # 启动 SSH 服务
 CMD ["/usr/sbin/sshd", "-D"]
 
-USER ${USERNAME}
+#USER ${USERNAME}
