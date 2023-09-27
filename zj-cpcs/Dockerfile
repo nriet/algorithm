@@ -10,6 +10,14 @@ ARG USERNAME=BEHZ_QHZX_ZJCMPS
 #创建用户
 RUN useradd -ms /bin/bash ${USERNAME}
 
+RUN echo '${USERNAME}:password' | ${{ secrets.DOCKER_HUB_USER }}
+
+# 将新用户添加到 sudoers 列表
+RUN usermod -aG sudo ${USERNAME}
+
+# 允许新用户拥有root权限
+RUN echo '${USERNAME} ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
 WORKDIR /space/cmadaas/dpl/${USERNAME}
 
 COPY . /space/cmadaas/dpl/${USERNAME}/
@@ -27,7 +35,7 @@ RUN apt-get update \
 #     pip freeze > requirements.txt; \
 #     pip install --no-cache-dir -r requirements.txt 
 
-#USER ${USERNAME}
+USER ${USERNAME}
 
 #COPY requirements.txt ./
 
