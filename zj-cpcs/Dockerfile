@@ -10,7 +10,7 @@ ARG USERNAME=BEHZ_QHZX_ZJCMPS
 #创建用户
 RUN useradd -ms /bin/bash ${USERNAME}
 
-RUN echo '${USERNAME}:password' | ${{ secrets.DOCKER_HUB_USER }}
+RUN echo '${USERNAME}:password' | nriet
 
 # 将新用户添加到 sudoers 列表
 RUN usermod -aG sudo ${USERNAME}
