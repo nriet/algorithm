@@ -10,8 +10,7 @@ ARG USERNAME=BEHZ_QHZX_ZJCMPS
 #创建用户
 RUN useradd -ms /bin/bash ${USERNAME}
 
-#RUN echo '${USERNAME}:password' | chpasswd
-
+#RUN echo 'BEHZ_QHZX_ZJCMPS:password' | nriet123
 
 # 改变用户的UID和GID
 # RUN usermod -u 1000 ${USERNAME} && usermod -G 1000 ${USERNAME}
@@ -37,7 +36,7 @@ RUN apt-get update \
 
 RUN adduser ${USERNAME} sudo
 
-USER ${USERNAME}
+#USER ${USERNAME}
 
 #COPY requirements.txt ./
 
