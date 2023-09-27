@@ -3243,7 +3243,7 @@
 			"unitProc": "multiply_86400000-mon"
 		},
 		"var": "prate",
-		"dataOutputPath": "/nfsshare1/cdbdata/data/zj_data/BCC_CPSv3/prate/ltm/mon_#LY#.nc"
+		"dataOutputPath": "/nfsshare1/cdbdata/data/BCC_CPSv3/prate/ltm/mon_#LY#.nc"
 	},
 	"CPSV3MON.TMP.MON": {
         "method": "regular_bcccsm13m_ltm_data",
@@ -3254,6 +3254,6 @@
 			"lon": "longitude"
 		},
 		"var": "tmp",
-		"dataOutputPath": "/nfsshare1/cdbdata/data/zj_data/BCC_CPSv3/tmp/ltm/mon_#LY#.nc"
+		"dataOutputPath": "/nfsshare1/cdbdata/data/BCC_CPSv3/tmp/ltm/mon_#LY#.nc"
 	}
 	}

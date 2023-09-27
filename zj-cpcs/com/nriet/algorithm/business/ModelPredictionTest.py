@@ -421,7 +421,7 @@ if __name__ == "__main__":
         t1 = DateUtils.getTimeStamp()
         # 获取页面传参
         # page_params = ast.literal_eval(sys.argv[1])
-        out_path = "/nfsshare/cdbdata/data/zj_data/modes3/%s_AVGT_MON_202304_202305_202305_%s.nc"
+        out_path = "/nfsshare/cdbdata/data/modes3/%s_AVGT_MON_202304_202305_202305_%s.nc"
         page_params = {"reportTimeType": "day",
                         "timeType": "day",
                        "forecastTime": "20230501",

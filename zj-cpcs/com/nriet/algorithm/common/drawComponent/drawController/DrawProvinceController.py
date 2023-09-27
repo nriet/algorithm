@@ -581,7 +581,7 @@ if __name__ == '__main__':
     request_dict = None
     serial_no = str(uuid.uuid4())
     ext_params = ast.literal_eval(sys.argv[1])
-    # ext_params = {"outputFile":"/nfsshare/cdbdata/data/zj_data/monitor/hzzz/降水量预报图_4a31e6b5-ce00-4f6b-8096-213b2e97a6ed_image.png","province":"ZJ","subTitles":"2023年7月","ltm":"1991-2020","mainTitle":"降水量预报图","drawType":"SK","timeType":"mon","dataFile":"/nfsshare/cdbdata/data/zj_data/monitor/hzzz/4a31e6b5-ce00-4f6b-8096-213b2e97a6ed.txt","startTime":"202307","endTime":"202307","element":"RAIN"}
+    # ext_params = {"outputFile":"/nfsshare/cdbdata/data/monitor/hzzz/降水量预报图_4a31e6b5-ce00-4f6b-8096-213b2e97a6ed_image.png","province":"ZJ","subTitles":"2023年7月","ltm":"1991-2020","mainTitle":"降水量预报图","drawType":"SK","timeType":"mon","dataFile":"/nfsshare/cdbdata/data/monitor/hzzz/4a31e6b5-ce00-4f6b-8096-213b2e97a6ed.txt","startTime":"202307","endTime":"202307","element":"RAIN"}
     # ext_params = {"dataFile": "/nfsshare/cdbdata/product/cipas3/hzzz/b919d55b-c8e9-421f-9db3-009fa8dbae90.txt", "element": "TEMP", "province": "BABJ","mainTitle":"123456","subTitles":["000"],"outputFile":"/nfsshare/cdbdata/product/cipas3/hzzz/a28326d8-1778-4a64-8837-e29139adb1c4.png","drawType":"SK","timeType":"mon","ltm":"1991-2020","startTime":"202111","endTime":"202111"}
 
     colors = ext_params.get("colors", None)

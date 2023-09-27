@@ -460,7 +460,7 @@
     },
     "OISSTV2.SST.DAY": {
         "method": "regular_day_raw_data_single",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/ORIG-DATA/OCEN/NOAA-OISSTV2/#YYYY#/sst.day.mean.#YYYY#.v2.nc",
+		"dataInputPath": "/CMADAAS/ORIG-DATA/OCEN/NOAA-OISSTV2/#YYYY#/sst.day.mean.#YYYY#.v2.nc",
 		"original": {
 			"var": "sst"
 		},
@@ -469,7 +469,7 @@
 	},
 	"SSTV5.SST.MON": {
         "method": "regular_month_raw_data_single",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/ORIG-DATA/OCEN/NOAA-SSTV5/#YYYY#/sst.mnmean.nc",
+		"dataInputPath": "/CMADAAS/ORIG-DATA/OCEN/NOAA-SSTV5/#YYYY#/sst.mnmean.nc",
 		"original": {
 			"var": "sst"
 		},
@@ -484,13 +484,13 @@
  	},
     "NCEP.PRES.HGT.DAY": {
         "method": "regular_day_raw_data_single",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/KWBC/NRA/PRESSURE-DAY/#YYYY#/hgt.#YYYY#.nc",
+		"dataInputPath": "/CMADAAS/KWBC/NRA/PRESSURE-DAY/#YYYY#/hgt.#YYYY#.nc",
 		"var": "hgt",
 		"dataOutputPath": "/nfsshare/cdbdata/data/NCEPRA/pressure/hgt/day/#YYYY_MM#.nc"
 	},
     "NCEP.PRES.HGT.MON": {
         "method": "regular_month_raw_data_single",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/KWBC/NRA/PRESSURE-MONTH/#YYYY#/hgt.mon.mean.nc",
+		"dataInputPath": "/CMADAAS/KWBC/NRA/PRESSURE-MONTH/#YYYY#/hgt.mon.mean.nc",
 		"var": "hgt",
 		"dataOutputPath": "/nfsshare/cdbdata/data/NCEPRA/pressure/hgt/mon/#YYYY#.nc"
 	},
@@ -502,13 +502,13 @@
 	},
     "NCEP.PRES.UWND.DAY": {
         "method": "regular_day_raw_data_single",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/KWBC/NRA/PRESSURE-DAY/#YYYY#/uwnd.#YYYY#.nc",
+		"dataInputPath": "/CMADAAS/KWBC/NRA/PRESSURE-DAY/#YYYY#/uwnd.#YYYY#.nc",
 		"var": "uwnd",
 		"dataOutputPath": "/nfsshare/cdbdata/data/NCEPRA/pressure/uwnd/day/#YYYY_MM#.nc"
 	},
     "NCEP.PRES.UWND.MON": {
         "method": "regular_month_raw_data_single",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/KWBC/NRA/PRESSURE-MONTH/#YYYY#/uwnd.mon.mean.nc",
+		"dataInputPath": "/CMADAAS/KWBC/NRA/PRESSURE-MONTH/#YYYY#/uwnd.mon.mean.nc",
 		"var": "uwnd",
 		"dataOutputPath": "/nfsshare/cdbdata/data/NCEPRA/pressure/uwnd/mon/#YYYY#.nc"
 	},
@@ -520,13 +520,13 @@
 	},
     "NCEP.PRES.VWND.DAY": {
         "method": "regular_day_raw_data_single",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/KWBC/NRA/PRESSURE-DAY/#YYYY#/vwnd.#YYYY#.nc",
+		"dataInputPath": "/CMADAAS/KWBC/NRA/PRESSURE-DAY/#YYYY#/vwnd.#YYYY#.nc",
 		"var": "vwnd",
 		"dataOutputPath": "/nfsshare/cdbdata/data/NCEPRA/pressure/vwnd/day/#YYYY_MM#.nc"
 	},
     "NCEP.PRES.VWND.MON": {
         "method": "regular_month_raw_data_single",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/KWBC/NRA/PRESSURE-MONTH/#YYYY#/vwnd.mon.mean.nc",
+		"dataInputPath": "/CMADAAS/KWBC/NRA/PRESSURE-MONTH/#YYYY#/vwnd.mon.mean.nc",
 		"var": "vwnd",
 		"dataOutputPath": "/nfsshare/cdbdata/data/NCEPRA/pressure/vwnd/mon/#YYYY#.nc"
 	},
@@ -538,7 +538,7 @@
 	},
     "NCEP.SURF.SLP.MON": {
         "method": "regular_month_raw_data_single",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/KWBC/NRA/SURFACE-MONTH/#YYYY#/slp.mon.mean.nc",
+		"dataInputPath": "/CMADAAS/KWBC/NRA/SURFACE-MONTH/#YYYY#/slp.mon.mean.nc",
 		"var": "slp",
 		"dataOutputPath": "/nfsshare/cdbdata/data/NCEPRA/surface/slp/mon/#YYYY#.nc",
 		"unitConvert": {
@@ -554,7 +554,7 @@
 	},
     "CPSV3.HISTORY.PRATE.DAY": {
         "method": "regular_bcccpsv3_day_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/ORIG-DATA/NAFP/CEMC/CMA-CPSV3/S2S-Province/#YYYY#/#YYYYMMDD#/daily_bcccsm_#YYYYMMDD#00#MN#_PRECT.nc",
+		"dataInputPath": "/CMADAAS/ORIG-DATA/NAFP/CEMC/CMA-CPSV3/S2S-Province/#YYYY#/#YYYYMMDD#/daily_bcccsm_#YYYYMMDD#00#MN#_PRECT.nc",
 		"original": {
 			"var": "PRECT",
 			"lat": "latitude",
@@ -569,7 +569,7 @@
 	},
 	"CPSV3.HISTORY.TMP.DAY": {
         "method": "regular_bcccpsv3_day_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/ORIG-DATA/NAFP/CEMC/CMA-CPSV3/S2S-Province/#YYYY#/#YYYYMMDD#/daily_bcccsm_#YYYYMMDD#00#MN#_TREFHT.nc",
+		"dataInputPath": "/CMADAAS/ORIG-DATA/NAFP/CEMC/CMA-CPSV3/S2S-Province/#YYYY#/#YYYYMMDD#/daily_bcccsm_#YYYYMMDD#00#MN#_TREFHT.nc",
 		"original": {
 			"var": "TREFHT",
 			"lat": "latitude",
@@ -580,7 +580,7 @@
 	},
     "CPSV3.PRATE.DAY": {
         "method": "regular_bcccpsv3_day_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/CEMC/CMA-CPSV3/Daily/#YYYY#/#YYYYMMDD#/daily_bcccsm_#YYYYMMDD#00#MN#_PRECT.nc",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/CEMC/CMA-CPSV3/Daily/#YYYY#/#YYYYMMDD#/daily_bcccsm_#YYYYMMDD#00#MN#_PRECT.nc",
 		"original": {
 			"var": "PRECT",
 			"lat": "latitude",
@@ -595,7 +595,7 @@
 	},
 	"CPSV3.TMP.DAY": {
         "method": "regular_bcccpsv3_day_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/CEMC/CMA-CPSV3/Daily/#YYYY#/#YYYYMMDD#/daily_bcccsm_#YYYYMMDD#00#MN#_TREFHT.nc",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/CEMC/CMA-CPSV3/Daily/#YYYY#/#YYYYMMDD#/daily_bcccsm_#YYYYMMDD#00#MN#_TREFHT.nc",
 		"original": {
 			"var": "TREFHT",
 			"lat": "latitude",
@@ -606,7 +606,7 @@
 	},
     "NCC.T2M.MON": {
         "method": "regular_modes_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_ncc_csm11_#YYYYMM#_monthly_em.nc",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_ncc_csm11_#YYYYMM#_monthly_em.nc",
         "var": "t2m",
         "unitConvert": {
 			"unitName": "℃",
@@ -616,7 +616,7 @@
 	},
     "NCC.PRATE.MON": {
         "method": "regular_modes_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_ncc_csm11_#YYYYMM#_monthly_em.nc",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_ncc_csm11_#YYYYMM#_monthly_em.nc",
         "original": {
 			"var": "precsfc"
 		},
@@ -629,7 +629,7 @@
 	},
     "CFS2.T2M.MON": {
         "method": "regular_modes_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_ncep_cfs2_#YYYYMM#_monthly_em.nc",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_ncep_cfs2_#YYYYMM#_monthly_em.nc",
         "var": "t2m",
         "unitConvert": {
 			"unitName": "℃",
@@ -639,7 +639,7 @@
 	},
     "CFS2.PRATE.MON": {
         "method": "regular_modes_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_ncep_cfs2_#YYYYMM#_monthly_em.nc",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_ncep_cfs2_#YYYYMM#_monthly_em.nc",
         "original": {
 			"var": "precsfc"
 		},
@@ -652,7 +652,7 @@
 	},
     "JMA3.T2M.MON": {
         "method": "regular_modes_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_jma_cps3_#YYYYMM#_monthly_em.nc",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_jma_cps3_#YYYYMM#_monthly_em.nc",
         "var": "t2m",
         "unitConvert": {
 			"unitName": "℃",
@@ -662,7 +662,7 @@
 	},
     "JMA3.PRATE.MON": {
         "method": "regular_modes_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_jma_cps3_#YYYYMM#_monthly_em.nc",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_jma_cps3_#YYYYMM#_monthly_em.nc",
         "original": {
 			"var": "precsfc"
 		},
@@ -675,7 +675,7 @@
 	},
     "UKMO5.T2M.MON": {
         "method": "regular_modes_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_ukmo_glosea5_#YYYYMM#_monthly_em.nc",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_ukmo_glosea5_#YYYYMM#_monthly_em.nc",
         "var": "t2m",
         "unitConvert": {
 			"unitName": "℃",
@@ -685,7 +685,7 @@
 	},
     "UKMO5.PRATE.MON": {
         "method": "regular_modes_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_ukmo_glosea5_#YYYYMM#_monthly_em.nc",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/MODESv2_ukmo_glosea5_#YYYYMM#_monthly_em.nc",
         "original": {
 			"var": "precsfc"
 		},
@@ -698,7 +698,7 @@
 	},
     "JMA3.LTM.T2M.MON": {
         "method": "regular_modes_ltm_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/ltm/MODESv2_jma_cps3_#MM#_monthly_ltm.nc",
+		"dataInputPath": "/nfsshare/cdbdata/data/ltm/MODESv2_jma_cps3_#MM#_monthly_ltm.nc",
         "var": "t2m",
         "unitConvert": {
 			"unitName": "℃",
@@ -708,7 +708,7 @@
 	},
     "JMA3.LTM.PRATE.MON": {
         "method": "regular_modes_ltm_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/ltm/MODESv2_jma_cps3_#MM#_monthly_ltm.nc",
+		"dataInputPath": "/nfsshare/cdbdata/data/ltm/MODESv2_jma_cps3_#MM#_monthly_ltm.nc",
         "original": {
 			"var": "precsfc"
 		},
@@ -721,7 +721,7 @@
 	},
     "MODES.MME.T2M.MON": {
         "method": "regular_modes_mme_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/",
         "var": "t2m",
         "unitConvert": {
 			"unitName": "℃",
@@ -731,7 +731,7 @@
 	},
     "MODES.MME.PRATE.MON": {
         "method": "regular_modes_mme_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/NCC/MODES/#YYYY#/#YYYYMM#/",
         "original": {
 			"var": "precsfc"
 		},
@@ -744,7 +744,7 @@
 	},
     "MODES.MME.LTM.T2M.MON": {
         "method": "regular_modes_mme_ltm_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/ltm/#MM#/",
+		"dataInputPath": "/nfsshare/cdbdata/data/ltm/#MM#/",
         "var": "t2m",
         "unitConvert": {
 			"unitName": "℃",
@@ -754,7 +754,7 @@
 	},
     "MODES.MME.LTM.PRATE.MON": {
         "method": "regular_modes_mme_ltm_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/ltm/#MM#/",
+		"dataInputPath": "/nfsshare/cdbdata/data/ltm/#MM#/",
         "original": {
 			"var": "precsfc"
 		},
@@ -767,7 +767,7 @@
 	},
     "CPSV3MON.PRATE.MON": {
         "method": "regular_bcccpsv3_mon_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/CEMC/CMA-CPSV3/Seasonal/#YYYY#/#YYYYMM#01/monthly_bcccsm_#YYYYMM#01_ens_atm_PRECT.nc",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/CEMC/CMA-CPSV3/Seasonal/#YYYY#/#YYYYMM#01/monthly_bcccsm_#YYYYMM#01_ens_atm_PRECT.nc",
 		"original": {
 			"var": "PRECT",
 			"lat": "latitude",
@@ -782,7 +782,7 @@
 	},
 	"CPSV3MON.TMP.MON": {
         "method": "regular_bcccpsv3_mon_data",
-		"dataInputPath": "/nfsshare/cdbdata/data/zj_data/CMADAAS/DATA/NAFP/CEMC/CMA-CPSV3/Seasonal/#YYYY#/#YYYYMM#01/monthly_bcccsm_#YYYYMM#01_ens_atm_TREFHT.nc",
+		"dataInputPath": "/CMADAAS/DATA/NAFP/CEMC/CMA-CPSV3/Seasonal/#YYYY#/#YYYYMM#01/monthly_bcccsm_#YYYYMM#01_ens_atm_TREFHT.nc",
 		"original": {
 			"var": "TREFHT",
 			"lat": "latitude",

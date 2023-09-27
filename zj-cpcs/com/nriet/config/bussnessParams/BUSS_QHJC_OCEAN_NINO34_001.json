@@ -10,9 +10,9 @@
           "timeType": "#{timeType}",
           "timeRanges": "#{timeRanges}",
           "regions": "190,240,-5,5",
-          "dataInputPaths": "/nfsshare/cdbdata/data/zj_data/NOAA/sst/#{timeType}/",
+          "dataInputPaths": "/nfsshare/cdbdata/data/NOAA/sst/#{timeType}/",
           "levels": "",
-          "ltmDataInputPaths": "/nfsshare/cdbdata/data/zj_data/NOAA/sst/ltm/",
+          "ltmDataInputPaths": "/nfsshare/cdbdata/data/NOAA/sst/ltm/",
           "unitConvert": "",
           "ltm": "#{ltm}"
         },
