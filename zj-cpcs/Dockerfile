@@ -13,8 +13,8 @@ RUN apt-get update \
     rm -rf /var/lib/apt/lists/*
 
 # 配置 SSH 服务器
-RUN mkdir /var/run/sshd
-# RUN echo 'root:password' | chpasswd   # 设置 root 用户密码（请替换为你的密码）
+RUN mkdir /var/run/sshd_config
+
 RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
 
 COPY user_init.sh /
@@ -28,6 +28,12 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 #USER ${USERNAME}
+
+RUN ./user_init.sh ${USERNAME} 1001 nriet123
+
+COPY com /space/cmadaas/dpl/${USERNAME}/com
+
+RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}
 
 # 开放 SSH 服务器端口
 EXPOSE 22
