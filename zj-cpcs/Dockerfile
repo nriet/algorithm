@@ -7,16 +7,15 @@ LABEL version="1.0"
 #系统用户
 ARG USERNAME=BEHZ_QHZX_ZJCMPS
 
-#创建用户
-RUN useradd -ms /bin/bash ${USERNAME}
+# 添加用户：赋予sudo权限，指定密码
+RUN useradd -ms /bin/bash ${USERNAME} \
+    && adduser ${USERNAME} sudo \
+    && echo "${USERNAME}:1" | nriet
 
-RUN echo '${USERNAME}:password' | nriet
-
-# 将新用户添加到 sudoers 列表
-RUN usermod -aG sudo ${USERNAME}
-
+# 改变用户的UID和GID
+# RUN usermod -u 1000 ${USERNAME} && usermod -G 1000 ${USERNAME}
 # 允许新用户拥有root权限
-RUN echo '${USERNAME} ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+#RUN echo '${USERNAME} ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 WORKDIR /space/cmadaas/dpl/${USERNAME}
 
