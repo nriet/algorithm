@@ -17,18 +17,17 @@ RUN mkdir /var/run/sshd
 # RUN echo 'root:password' | chpasswd   # 设置 root 用户密码（请替换为你的密码）
 RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
 
-# RUN pip install pipreqs ;\
-#     find . -type d -exec sh -c "pipreqs {} --force" \;
-# RUN pip install --upgrade pip; \
-#     pip freeze > requirements.txt; \
-#     pip install --no-cache-dir -r requirements.txt 
+COPY user_init.sh /
 
-#USER ${USERNAME}
+RUN chmod 755 /user_init.sh
+
+RUN ./user_init.sh ${USERNAME} 1001 nriet123
 
 COPY requirements.txt ./
 
-# RUN pip install --upgrade pip; \
-#     pip install --no-cache-dir -r requirements.txt 
+RUN pip install --no-cache-dir -r requirements.txt
+
+USER ${USERNAME}
 
 # 开放 SSH 服务器端口
 EXPOSE 22
