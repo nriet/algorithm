@@ -24,5 +24,5 @@ fi
 
 echo $1:$3 | chpasswd
 
-sed -i '\$a$1  ALL=(ALL)  NOPASSWD: ALL' /etc/sudoers
+sed -i "\$a$1  ALL=(ALL)  NOPASSWD: ALL" /etc/sudoers
 #/usr/sbin/sshd -D
