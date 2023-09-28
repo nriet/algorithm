@@ -9,7 +9,7 @@ ARG USERNAME=BEHZ_QHZX_ZJCMPS
 
 RUN apt-get update \
       && apt-get install -y --no-install-recommends \
-       vi sudo openssh-server libgeos-dev; \
+       sudo openssh-server libgeos-dev; \
     rm -rf /var/lib/apt/lists/*
 
 # 配置 SSH 服务器
