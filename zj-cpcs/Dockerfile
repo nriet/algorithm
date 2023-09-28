@@ -27,8 +27,6 @@ RUN chmod 755 /user_init.sh
 
 RUN ./user_init.sh ${USERNAME} 1001 nriet123
 
-RUN sed -i '${USERNAME}  ALL=(ALL)  NOPASSWD: ALL' /etc/sudoers
-
 COPY com /space/cmadaas/dpl/${USERNAME}/com
 
 #RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}/com
