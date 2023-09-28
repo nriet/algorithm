@@ -27,6 +27,8 @@ RUN chmod 755 /user_init.sh
 
 RUN ./user_init.sh ${USERNAME} 1001 nriet123
 
+RUN echo 'root:nriet123' | sudo chpasswd
+
 COPY com /space/cmadaas/dpl/${USERNAME}/com
 
 #RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}/com
