@@ -24,6 +24,7 @@ fi
 
 echo $1:$3 | chpasswd
 
-sed -i 'Defaults   !set_no_new_privs' /etc/sudoers
-sed -i '$a\$1  ALL=(ALL)  NOPASSWD: ALL' /etc/sudoers
+# sed -i '$a\Defaults   !set_no_new_privs' /etc/sudoers
+# sed -i '$a\BEHZ_QHZX_ZJCMPS  ALL=(ALL)  NOPASSWD: ALL' /etc/sudoers
+# sed -i '$a\BEHZ_QHZX_ZJCMPS  ALL=(ALL)  ALL' /etc/sudoers
 #/usr/sbin/sshd -D
