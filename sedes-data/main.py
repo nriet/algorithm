@@ -43,7 +43,7 @@ else:
     for year in range(yystart, yylast + 1):
         for month in range(1, 13):
             process_time = str(year) + str(month)
-            process_time_start = str(year) + '-' + month
+            process_time_start = str(year) + '-' + str(month)
             # 计算当前月份的后5个月份(如2023-05，process_time_end2023-10）
             process_time_end = get_recent_month(datetime.date(year, int(month), day), 5)
             operation(process_time, process_time_start, process_time_end)
