@@ -16,7 +16,7 @@ import xarray as xr
 import argparse
 import pandas as pd
 import shutil
-
+from StationToNc import interp_nearest
 
 def acc(forecast, obs):
     acc = np.sum(forecast * obs)
@@ -191,31 +191,47 @@ def operation(process_time, process_time_start, process_time_end):
     station_info = np.delete(station_info, [1, 2], 1)
     lon = xr.DataArray(station_info[:, 1], dims='station').astype(np.float32)
     lat = xr.DataArray(station_info[:, 2], dims='station').astype(np.float32)
-    # reader = Reader("/mnt/g/ncl/mask/China-Province/zhejiang.dbf")
-    # proj= ccrs.PlateCarree()  # 简写投影
-    # extent=[118,123.2,27,31.2]#限定绘图范围
 
-    f_t2m = xr.Dataset({'t2m': (('time', 'station'), t2m[1:, :])},
-                   coords={'time': ('time', time[1:]),
-                           'station': ('station', np.arange(66)),
-                           'lat': (lat),
-                           'lon': (lon)})
-    f_prate = xr.Dataset({'prate': (('time', 'station'), precip[1:, :])},
-                       coords={'time': ('time', time[1:]),
-                               'station': ('station', np.arange(66)),
-                               'lat': (lat),
-                               'lon': (lon)})
+    station_t2m = xr.Dataset({'t2m': (('time', 'station'), t2m[1:, :])},
+                             coords={'time': ('time', time[1:]),
+                                     'station': ('station', np.arange(66)),
+                                     'lat': lat,
+                                     'lon': lon})
+    station_prate = xr.Dataset({'prate': (('time', 'station'), precip[1:, :])},
+                               coords={'time': ('time', time[1:]),
+                                       'station': ('station', np.arange(66)),
+                                       'lat': lat,
+                                       'lon': lon})
+    output_dir_station_t2m = output_dir + "t2m/station/mon/"
+    if not os.path.exists(output_dir_station_t2m):
+        os.makedirs(output_dir_station_t2m)
+    output_dir_station_prate = output_dir + "prate/station/mon/"
+    if not os.path.exists(output_dir_station_prate):
+        os.makedirs(output_dir_station_prate)
+    station_t2m.to_netcdf(output_dir_station_t2m + process_time[0:4] + "_" + process_time[4:6] + '.nc')
+    station_prate.to_netcdf(output_dir_station_prate + process_time[0:4] + "_" + process_time[4:6] + '.nc')
 
-    output_dir_t2m = output_dir + "t2m/station/mon/"
-    if not os.path.exists(output_dir_t2m):
-        os.makedirs(output_dir_t2m)
-    output_dir_prate = output_dir + "prate/station/mon/"
-    if not os.path.exists(output_dir_prate):
-        os.makedirs(output_dir_prate)
-
-    print(process_time)
-    f_t2m.to_netcdf(output_dir_t2m + process_time[0:4] + "_" + process_time[4:6] + '.nc')
-    f_prate.to_netcdf(output_dir_prate + process_time[0:4] + "_" + process_time[4:6] + '.nc')
+    # 将站点数据插值到格点
+    output_dir_grid_t2m = output_dir + "t2m/grid/mon/"
+    if not os.path.exists(output_dir_grid_t2m):
+        os.makedirs(output_dir_grid_t2m)
+    output_dir_grid_prate = output_dir + "prate/grid/mon/"
+    if not os.path.exists(output_dir_grid_prate):
+        os.makedirs(output_dir_grid_prate)
+    gridLat = [27, 31.4, 0.01]
+    gridLon = [117.8, 123, 0.01]
+    interp_grid_data_t2m = interp_nearest(station_t2m["t2m"], lat.values, lon.values, gridLat, gridLon)
+    interp_grid_data_prate = interp_nearest(station_prate["prate"], lat.values, lon.values, gridLat, gridLon)
+    grid_t2m = xr.Dataset({'t2m': (('time', 'lat', 'lon'), interp_grid_data_t2m.values)},
+                          coords={'time': (interp_grid_data_t2m["time"]),
+                                  'lat': (interp_grid_data_t2m["lat"]),
+                                  'lon': (interp_grid_data_t2m["lon"])})
+    grid_prate = xr.Dataset({'prate': (('time', 'lat', 'lon'), interp_grid_data_prate.values)},
+                            coords={'time': (interp_grid_data_prate["time"]),
+                                    'lat': (interp_grid_data_prate["lat"]),
+                                    'lon': (interp_grid_data_prate["lon"])})
+    grid_t2m.to_netcdf(output_dir_grid_t2m + process_time[0:4] + "_" + process_time[4:6] + '.nc')
+    grid_prate.to_netcdf(output_dir_grid_prate + process_time[0:4] + "_" + process_time[4:6] + '.nc')
 
     # 删除中间文件
     if os.path.exists("./ec_data"):

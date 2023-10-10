@@ -27,3 +27,18 @@ python app/SEDES/main.py 2023-08
 #
 # # compute anomaly
 # Anomaly_process(yystart, yylast, months)
+
+
+
+
+
+docker run --restart=always --name='SEDES' -d nriet/algorithm:sedes-python3
+
+
+docker run -u root --name='SEDES' -d \
+nriet/algorithm:sedes-python3 \
+tail -f /space/cmadaas/dpl/nriet/app/SEDES/main.py
+
+
+
+docker run --rm -v /home/test/ec_data:/space/cmadaas/dpl/nriet/app/SEDES/ec_data nriet/algorithm:sedes-python3 

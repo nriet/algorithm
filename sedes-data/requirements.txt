@@ -9,3 +9,5 @@ matplotlib
 joblib
 pytorch_lightning
 scipy
+metpy
+logging
