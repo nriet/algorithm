@@ -24,22 +24,24 @@ else:
     del sys.argv[1]
     print("Argument passed: ", argument)
 
-    yystart = int(argument[0:4])
-    yylast = int(argument[0:4])
+    yystart = 2022
+    yylast = 2022
     months = [argument[5:7]]
     day = 1
 
     # download ec and ec_climate data
     for year in range(yystart, yylast + 1):
-        download_ec(year, months)
-        download_ec_climate(str(year), months)
+        for month in range(1, 13):
+            download_ec(year, month)
+            download_ec_climate(str(year), month)
+            Anomaly_process(year, year, month)
 
     # compute anomaly
-    Anomaly_process(yystart, yylast, months)
+    
 
     # opreation
     for year in range(yystart, yylast + 1):
-        for month in months:
+        for month in range(1, 13):
             process_time = str(year) + str(month)
             process_time_start = str(year) + '-' + month
             # 计算当前月份的后5个月份(如2023-05，process_time_end2023-10）
