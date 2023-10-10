@@ -26,18 +26,15 @@ else:
 
     yystart = 2022
     yylast = 2022
-    months = [argument[5:7]]
+    months = ["01",'02','03','04','05','06','07','08','09','10','11','12']
     day = 1
 
-    # download ec and ec_climate data
     for year in range(yystart, yylast + 1):
-        for month in range(1, 13):
-            download_ec(year, month)
-            download_ec_climate(str(year), month)
-            Anomaly_process(year, year, month)
+        download_ec(year, months)
+        download_ec_climate(str(year), months)
 
     # compute anomaly
-    
+    Anomaly_process(yystart, yylast, months)
 
     # opreation
     for year in range(yystart, yylast + 1):
