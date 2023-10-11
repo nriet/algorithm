@@ -1,0 +1,11 @@
+[CMA_BASE]
+name=CMA_BASE
+baseurl=https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/base/x86_64/
+gpgcheck=0
+enabled=1
+
+[CMA_UPDATES]
+name=CMA_UPDATES
+baseurl=https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+gpgcheck=0
+enabled=1
