@@ -35,7 +35,7 @@ def operation(process_time, process_time_start, process_time_end):
     print("model data reprocess")
     # process_time = '202305'
     time = pd.date_range(process_time_start, process_time_end, freq='MS')
-    time = time.strftime('%Y%m').tolist()
+    time = time.strftime('%Y-%m').tolist()
     print(time)
     # ec和ec_climate数据路径（修改）
     data_path = './ec_data/'
