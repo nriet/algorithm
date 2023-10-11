@@ -36,7 +36,7 @@ jobs:  # workflow中的job
         with:
           context: sedes-data/.
           push: true
-          tags: nriet/algorithm:sedes-data-2023-07
+          tags: nriet/algorithm:sedes-data-2023-06
           
       # - name: restcloud:2.5-slim-buster-zj-climate-miniconda
       #   uses: docker/build-push-action@v2 # docker build  & push
