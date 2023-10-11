@@ -24,8 +24,8 @@ else:
     del sys.argv[1]
     print("Argument passed: ", argument)
 
-    yystart = 2023
-    yylast = 2023
+    yystart = int(argument[0:4])
+    yylast = int(argument[0:4])
     # months = ["01",'02','03','04','05','06','07','08','09','10','11','12']
     months = ["01"]
     day = 1
@@ -39,9 +39,9 @@ else:
 
     # opreation
     for year in range(yystart, yylast + 1):
-        for month in range(1, 13):
+        for month in months:
             process_time = str(year) + str(month)
-            process_time_start = str(year) + '-' + str(month)
+            process_time_start = str(year) + '-' + month
             # 计算当前月份的后5个月份(如2023-05，process_time_end2023-10）
             process_time_end = get_recent_month(datetime.date(year, int(month), day), 5)
             operation(process_time, process_time_start, process_time_end)
