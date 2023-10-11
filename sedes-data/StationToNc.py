@@ -22,6 +22,9 @@ IDW:
 
 
 def interp_ref(inputData, stationLat, stationLon, gridLat, gridLon):
+    """
+        径向基插值函数
+    """
     lats = gridLat
     lons = gridLon
     zlat = stationLat
@@ -36,7 +39,7 @@ def interp_ref(inputData, stationLat, stationLon, gridLat, gridLon):
         zlon1, zlat1, tmpdata = remove_nan_observations(zlon, zlat, inputData)
         rf = Rbf(zlon1, zlat1, tmpdata.values, kind="thin_plate", smooth=0.2)
         grid1 = rf(olon, olat)
-        grid1 = grid1.reshape((lats[2], lons[2]))
+        grid1 = grid1.reshape((glat.shape[0], glon.shape[0]))
         interp_grid_data = xr.DataArray(grid1, coords=[glat, glon], dims=['lat', 'lon'])
     else:
         times = inputData["time"]
@@ -48,7 +51,7 @@ def interp_ref(inputData, stationLat, stationLon, gridLat, gridLon):
                 interpData = np.full([glat.shape[0], glon.shape[0]], np.nan)
             else:
                 zlon1, zlat1, tmpdata = remove_nan_observations(zlon, zlat, tmpdata)
-                rf = Rbf(zlon1, zlat1, tmpdata.values, epsilon=2)
+                rf = Rbf(zlon1, zlat1, tmpdata.values, function='linear', smooth=0.5)
                 interpData = rf(olon, olat)
                 interpData = interpData.reshape((glat.shape[0], glon.shape[0]))
             interpData = xr.DataArray(interpData, coords=[glat, glon], dims=['lat', 'lon'])

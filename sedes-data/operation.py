@@ -16,7 +16,7 @@ import xarray as xr
 import argparse
 import pandas as pd
 import shutil
-from StationToNc import interp_nearest
+from StationToNc import interp_nearest, interp_ref
 
 def acc(forecast, obs):
     acc = np.sum(forecast * obs)
@@ -218,10 +218,10 @@ def operation(process_time, process_time_start, process_time_end):
     output_dir_grid_prate = output_dir + "prate/grid/mon/"
     if not os.path.exists(output_dir_grid_prate):
         os.makedirs(output_dir_grid_prate)
-    gridLat = [27, 31.4, 0.01]
-    gridLon = [117.8, 123, 0.01]
-    interp_grid_data_t2m = interp_nearest(station_t2m["t2m"], lat.values, lon.values, gridLat, gridLon)
-    interp_grid_data_prate = interp_nearest(station_prate["prate"], lat.values, lon.values, gridLat, gridLon)
+    gridLat = [27, 31.4, 0.1]
+    gridLon = [117.8, 123, 0.1]
+    interp_grid_data_t2m = interp_ref(station_t2m["t2m"], lat.values, lon.values, gridLat, gridLon)
+    interp_grid_data_prate = interp_ref(station_prate["prate"], lat.values, lon.values, gridLat, gridLon)
     grid_t2m = xr.Dataset({'t2m': (('time', 'lat', 'lon'), interp_grid_data_t2m.values)},
                           coords={'time': (interp_grid_data_t2m["time"]),
                                   'lat': (interp_grid_data_t2m["lat"]),
