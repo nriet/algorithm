@@ -28,5 +28,4 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt ;\
     python main.py ${time} ;\
-    rm -rf ec_data ;\
     pip freeze | xargs pip uninstall -y
