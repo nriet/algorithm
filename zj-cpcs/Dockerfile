@@ -1,42 +1,14 @@
-FROM python:3.9-slim
+FROM nriet/kylin10:v1.0
 
 LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
-LABEL version="1.0"
+COPY CMA.repo /etc/yum.repos.d/CMA.repo
 
-#系统用户
-ARG USERNAME=BEHZ_QHZX_ZJCMPS
-
-RUN apt-get update \
-      && apt-get install -y --no-install-recommends \
-       vim sudo openssh-server libgeos-dev; \
-    rm -rf /var/lib/apt/lists/*
-
-# 配置 SSH 服务器
-RUN mkdir /var/run/sshd
-
-RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
-
-COPY requirements.txt ./
-
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY user_init.sh /
-
-RUN chmod 755 /user_init.sh
-
-RUN ./user_init.sh ${USERNAME} 1001 nriet123
-
-RUN echo 'root:nriet123' | sudo chpasswd
-
-COPY com /space/cmadaas/dpl/${USERNAME}/com
-
-#RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}/com
+RUN yum update \
+      && yum install -y \
+       geos; \
+    yum clean all; \
+    rm -rf /var/cache/yum
 
 # 开放 SSH 服务器端口
 EXPOSE 22
-
-# 启动 SSH 服务
-CMD ["/usr/sbin/sshd", "-D"]
-
-#USER ${USERNAME}
