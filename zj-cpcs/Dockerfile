@@ -5,7 +5,7 @@ LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 COPY CMA.repo /etc/yum.repos.d/CMA.repo
 
 RUN yum update; \
-    yum install -y geos; \
+    yum install -y sudo geos; \
     yum clean all; \
     rm -rf /var/cache/yum
 
