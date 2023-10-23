@@ -1,13 +1,16 @@
-FROM nriet/kylin10:v1.0
+FROM centos:centos7.9.2009
 
-LABEL maintainer="Axiu <itzyx@vip.qq.com>"
+MAINTAINER Axiu <itzyx@vip.qq.com>
 
-COPY CMA.repo /etc/yum.repos.d/CMA.repo
+RUN yum install -y net-tools.x86_64 kde-l10n-Chinese &&\
+                   yum clean all && \
+                   rm -rf /var/cache/yum
 
-RUN yum update; \
-    yum install -y sudo geos tar; \
-    yum clean all; \
-    rm -rf /var/cache/yum
+RUN localedef -c -f UTF-8 -i zh_CN zh_CN.utf8
 
-# 开放 SSH 服务器端口
-EXPOSE 22
+ENV LC_ALL zh_CN.UTF-8
+
+ENV TZ PRC
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
