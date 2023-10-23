@@ -15,12 +15,13 @@ ENV TZ PRC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # 配置 SSH 服务器
-#RUN mkdir /var/run/sshd
+RUN mkdir /var/run/sshd
 
-RUN ssh-keygen -A && \
+# RUN echo 'root:password' | chpasswd   # 设置 root 用户密码（请替换为你的密码）
+RUN  ssh-keygen -A && \
     echo 'root:password' | chpasswd && \
-    sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-    
+    sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
+
 # 开放 SSH 服务器端口
 EXPOSE 22
 
