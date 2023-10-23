@@ -2,7 +2,7 @@ FROM centos:centos7.9.2009
 
 MAINTAINER Axiu <itzyx@vip.qq.com>
 
-RUN yum install -y epel-release net-tools.x86_64 kde-l10n-Chinese sudo openssh-server geos geos-devel &&\
+RUN yum install -y  net-tools.x86_64 kde-l10n-Chinese sudo openssh-server epel-release geos geos-devel &&\
                    yum clean all && \
                    rm -rf /var/cache/yum
 
