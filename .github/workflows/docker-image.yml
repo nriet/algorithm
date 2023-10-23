@@ -58,8 +58,8 @@ jobs:  # workflow中的job
       #     push: true
       #     tags: nriet/algorithm:centos7.9.2009-zj-cpcs
       - name: algorithm:ncl
-      uses: docker/build-push-action@v2 # docker build  & push
-      with:
-        context: ncl/.
-        push: true
-        tags: nriet/algorithm:centos7.9.2009-ncl
+        uses: docker/build-push-action@v2 # docker build  & push
+        with:
+          context: ncl/.
+          push: true
+          tags: nriet/algorithm:centos7.9.2009-ncl
