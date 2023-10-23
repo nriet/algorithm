@@ -32,6 +32,11 @@ RUN set -eux; \
     tar zxvf ncl.tar.gz; \
 	rm -rf ncl.tar.gz
 
+# NCL依赖文件
+RUN yum install -y fontconfig libXrender libXext libgomp &&\
+                   yum clean all && \
+                   rm -rf /var/cache/yum
+
 # 配置 SSH 服务器
 RUN mkdir /var/run/sshd
 
