@@ -51,9 +51,15 @@ jobs:  # workflow中的job
       #     context: zj-cpcs/.
       #     push: true
       #     tags: nriet/algorithm:kylin10-zj-cpcs
-      - name: algorithm:zj-cpcs
-        uses: docker/build-push-action@v2 # docker build  & push
-        with:
-          context: zj-cpcs/.
-          push: true
-          tags: nriet/algorithm:centos7.9.2009-zj-cpcs
+      # - name: algorithm:zj-cpcs
+      #   uses: docker/build-push-action@v2 # docker build  & push
+      #   with:
+      #     context: zj-cpcs/.
+      #     push: true
+      #     tags: nriet/algorithm:centos7.9.2009-zj-cpcs
+      - name: algorithm:ncl
+      uses: docker/build-push-action@v2 # docker build  & push
+      with:
+        context: ncl/.
+        push: true
+        tags: nriet/algorithm:centos7.9.2009-ncl
