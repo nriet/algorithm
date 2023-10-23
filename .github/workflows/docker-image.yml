@@ -56,4 +56,4 @@ jobs:  # workflow中的job
         with:
           context: zj-cpcs/.
           push: true
-          tags: nriet/algorithm:centos7.9.2009
+          tags: nriet/algorithm:centos7.9.2009-zj-cpcs
