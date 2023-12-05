@@ -218,8 +218,8 @@ def operation(process_time, process_time_start, process_time_end):
     output_dir_grid_prate = output_dir + "prate/grid/mon/"
     if not os.path.exists(output_dir_grid_prate):
         os.makedirs(output_dir_grid_prate)
-    gridLat = [25, 35, 0.1]
-    gridLon = [115, 125, 0.1]
+    gridLat = [27, 31.4, 0.1]
+    gridLon = [117.8, 123, 0.1]
     interp_grid_data_t2m = interp_ref(station_t2m["t2m"], lat.values, lon.values, gridLat, gridLon)
     interp_grid_data_prate = interp_ref(station_prate["prate"], lat.values, lon.values, gridLat, gridLon)
     grid_t2m = xr.Dataset({'t2m': (('time', 'lat', 'lon'), interp_grid_data_t2m.values)},
