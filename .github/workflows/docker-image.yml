@@ -31,12 +31,12 @@ jobs:  # workflow中的job
       #     push: true
       #     tags: nriet/algorithm:sedes-python3
 
-      # - name: algorithm:sedes-data
-      #   uses: docker/build-push-action@v2 # docker build  & push
-      #   with:
-      #     context: sedes-data/.
-      #     push: true
-      #     tags: nriet/algorithm:sedes-data-2023
+      - name: algorithm:sedes-data
+        uses: docker/build-push-action@v2 # docker build  & push
+        with:
+          context: sedes-data/.
+          push: true
+          tags: nriet/algorithm:sedes-data-2023-11
           
       # - name: restcloud:2.5-slim-buster-zj-climate-miniconda
       #   uses: docker/build-push-action@v2 # docker build  & push
@@ -57,9 +57,9 @@ jobs:  # workflow中的job
       #     context: zj-cpcs/.
       #     push: true
       #     tags: nriet/algorithm:centos7.9.2009-zj-cpcs
-      - name: algorithm:ncl
-        uses: docker/build-push-action@v2 # docker build  & push
-        with:
-          context: ncl/.
-          push: true
-          tags: nriet/algorithm:centos7.9.2009-ncl
+      # - name: algorithm:ncl
+      #   uses: docker/build-push-action@v2 # docker build  & push
+      #   with:
+      #     context: ncl/.
+      #     push: true
+      #     tags: nriet/algorithm:centos7.9.2009-ncl
