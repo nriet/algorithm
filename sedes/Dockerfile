@@ -9,6 +9,7 @@ RUN apt-get update \
        vim sudo openssh-server; \
     rm -rf /var/lib/apt/lists/*
 
+
 # 配置 SSH 服务器
 RUN mkdir /var/run/sshd
 
