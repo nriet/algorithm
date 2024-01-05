@@ -24,19 +24,19 @@ jobs:  # workflow中的job
           username: ${{ secrets.DOCKER_HUB_USER }}  # 配置dockerhub的认证，在Github项目主页 【Settings】 -> 【Secrets】 添加对应变量
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-      - name: algorithm:sedes-python3
-        uses: docker/build-push-action@v2 # docker build  & push
-        with:
-          context: sedes/.
-          push: true
-          tags: nriet/algorithm:python3-sedes
-
-      # - name: algorithm:sedes-data
+      # - name: algorithm:sedes-python3
       #   uses: docker/build-push-action@v2 # docker build  & push
       #   with:
-      #     context: sedes-data/.
+      #     context: sedes/.
       #     push: true
-      #     tags: nriet/algorithm:sedes-data-2023-08
+      #     tags: nriet/algorithm:python3-sedes
+
+      - name: algorithm:sedes-data
+        uses: docker/build-push-action@v2 # docker build  & push
+        with:
+          context: sedes-data/.
+          push: true
+          tags: nriet/algorithm:sedes-data-2023-08
           
       # - name: restcloud:2.5-slim-buster-zj-climate-miniconda
       #   uses: docker/build-push-action@v2 # docker build  & push
