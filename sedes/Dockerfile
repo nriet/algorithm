@@ -18,9 +18,6 @@ RUN chown -R ${USERNAME}:${USERNAME} /space/cmadaas/dpl/${USERNAME}
 
 USER ${USERNAME}
 
-#下载EC认证文件，用于人工智能算法
-COPY .cdsapirc /home/${USERNAME}/
-
 COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt 
