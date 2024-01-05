@@ -4,9 +4,6 @@ LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
 LABEL version="1.0"
 
-#时间
-ARG time=2023-08
-
 #系统用户
 ARG USERNAME=nriet
 
