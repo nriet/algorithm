@@ -138,11 +138,11 @@ def operation(process_time, process_time_start, process_time_end):
     args.input_shape = input_shape
 
     model_temp = PrecModel()
-    model_temp = model_temp.load_from_checkpoint(checkpoint_path='./model/temp_trans.ckpt',args=args, map_location='cpu')
+    model_temp = PrecModel.load_from_checkpoint(checkpoint_path='./model/temp_trans.ckpt',args=args, map_location='cpu')
     model_temp.eval()
 
     model_precip = PrecModel(args)
-    model_precip = model_precip.load_from_checkpoint(checkpoint_path='./model/precip_trans.ckpt',args=args, map_location='cpu')
+    model_precip = PrecModel.load_from_checkpoint(checkpoint_path='./model/precip_trans.ckpt',args=args, map_location='cpu')
     model_precip.eval()
 
     data = xr.open_dataset('./model_data/' + process_time + '.nc')
