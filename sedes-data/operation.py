@@ -137,7 +137,7 @@ def operation(process_time, process_time_start, process_time_end):
     input_shape = torch.as_tensor(input_shape)
     args.input_shape = input_shape
 
-    model_temp = PrecModel()
+    model_temp = PrecModel(args)
     model_temp = PrecModel.load_from_checkpoint(checkpoint_path='./model/temp_trans.ckpt',args=args, map_location='cpu')
     model_temp.eval()
 
