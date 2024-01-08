@@ -1,11 +1,11 @@
-FROM python:3.9-slim-buster
+FROM python:3.8-slim-buster
 
 LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
 LABEL version="1.0"
 
 #时间
-ARG time=2023-08
+ARG time=2023-11
 
 #系统用户
 ARG USERNAME=nriet
