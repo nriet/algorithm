@@ -27,6 +27,7 @@ COPY .cdsapirc /home/${USERNAME}/
 COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt ;\
+    python -m pytorch_lightning.utilities.upgrade_checkpoint model/temp_trans.ckpt ;\
     python main.py ${time} ;\
     rm -rf ec_data ;\
     pip freeze | xargs pip uninstall -y
