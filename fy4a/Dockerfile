@@ -23,9 +23,9 @@ COPY code /home/code
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN cd /home/code/; \
-	python a0_ll2lc_fy4a.py; \
-	f2py -m index2data -c index2data.f90
+# RUN cd /home/code/; \
+# 	python a0_ll2lc_fy4a.py; \
+# 	f2py -m index2data -c index2data.f90
 
 # 开放 SSH 服务器端口
 EXPOSE 22
