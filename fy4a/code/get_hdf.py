@@ -16,7 +16,7 @@ from netCDF4 import Dataset
 import shutil
 import os
 from index2data import index2data,cal2data,cal2data_07
-
+import traceback
 ###################
 
 
@@ -24,14 +24,14 @@ def get_hdf(path_in,path_out,file_in):
     
 #    time0=time.mktime(time.strptime('%Y%m%d_%H%M%S'))
     
-    time_s_c=file_in.split('_')[15]
-    time_e_c=file_in.split('_')[16]
+    # time_s_c=file_in.split('_')[15]
+    # time_e_c=file_in.split('_')[16]
     
-    time_s=time.mktime(time.strptime(time_s_c,'%Y%m%d%H%M%S'))
-    time_e=time.mktime(time.strptime(time_e_c,'%Y%m%d%H%M%S'))
+    # time_s=time.mktime(time.strptime(time_s_c,'%Y%m%d%H%M%S'))
+    # time_e=time.mktime(time.strptime(time_e_c,'%Y%m%d%H%M%S'))
     
-    time_str=time_s_c[0:12]
-    path_temp=time_s_c[0:8]
+    # time_str=time_s_c[0:12]
+    # path_temp=time_s_c[0:8]
     
     
     res_str=file_in.split('_')[-2]
@@ -65,10 +65,18 @@ def get_hdf(path_in,path_out,file_in):
         res=0.005
         brands=['02']
         lc_file='FY4A_China_500m.pkl'
+    elif res_str=='1000M':
+        res=0.01
+        brands=['01','02','03']
+        lc_file='FY4A_China_1km.pkl'
+    elif res_str=='2000M':
+        res=0.02
+        brands=['01','02','03','04','05','06','07','08']
+        lc_file='FY4A_China_2km.pkl'
     else:
         print('reslution error '+file_in)
     
-    #print('lc_file:'+lc_file)
+    print('lc_file:'+lc_file)
     
     pkl_file=open(lc_file,'rb')
     lc_info=pickle.load(pkl_file)
@@ -92,8 +100,8 @@ def get_hdf(path_in,path_out,file_in):
     #if 1:
         now0=time.time()
         f_hdf=h5py.File(path_in+file_in,'r')
-        
-#        f_hdf.keys()
+        CALChannel = f_hdf['Calibration']
+        NOMChannel = f_hdf['Data']
 
         s_l=f_hdf.attrs['Begin Line Number'][0]
         e_l=f_hdf.attrs['End Line Number'][0]
@@ -110,29 +118,29 @@ def get_hdf(path_in,path_out,file_in):
             #try:
             if 1:
 
-                cal=np.array(f_hdf['CALChannel'+brand],'float64')
-                data=np.array(f_hdf['NOMChannel'+brand],'int')
+                cal=np.array(CALChannel['CALChannel'+brand],'float64')
+                data=np.array(NOMChannel['NOMChannel'+brand],'int')
         
                 brand_0=index2data(data,l,c)
                 
-                if brand=='07':
-                    brand_out=cal2data_07(brand_0,cal)
-                else:
-                    brand_out=cal2data(brand_0,cal)
+#                 if brand# =='07':
+#                     brand_out=cal2data_07(brand_0,cal)
+#                 else:
+                brand_out=cal2data(brand_0,cal)
                 if brand=='02':
                     brand_out=brand_out*100
                     for i in range(len(brand_out)):
                         for j in range(len(brand_out[0])):
                             if brand_out[i][j]<0.1:
                                 brand_out[i][j]=0
-                path_out_b=path_out+'B'+brand+'/'+path_temp+'/'
-                if os.path.exists(path_out_b)==False:
-                    os.makedirs(path_out_b)
+                # path_out_b=path_out+'B'+brand+'/'+path_temp+'/'
+                if os.path.exists(path_out)==False:
+                    os.makedirs(path_out)
                 
-                file_out=path_out_b+'MOP_CHINA_FY_B'+brand+'_'+time_str+'.nc'
+                path_out_name = file_in[:file_in.index(".")]+'_'+brand+'.nc'
+                file_out=path_out+path_out_name
                 
                 if (int(brand)<=6):
-                    
                     varname='albedo'     
                 else:
                     varname='tbb'
@@ -162,7 +170,7 @@ def get_hdf(path_in,path_out,file_in):
                     # f.variables['end_time'][:]=time_e
                     # f.variables['tbb'][:]=brand_out
                     # f.close()
-                print('Done '+brand+' '+time_str)
+                print('Done '+brand+' '+file_out)
       #      except:
       #          print('Error '+brand+' '+time_str)
                 
@@ -170,7 +178,8 @@ def get_hdf(path_in,path_out,file_in):
         flag=1
     except Exception as err:
         flag=0
+        traceback.print_exc()
         print(err)
-        print('Error:'+time_str)
     return flag
         
+
