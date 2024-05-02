@@ -1,40 +1,34 @@
-FROM python:3.6.9-slim
- 
-# Set the working directory to /app
-WORKDIR /app
- 
-# Copy the current directory contents into the container at /app
-COPY . /app
+FROM python:3.9-slim
+
+LABEL maintainer="Axiu <itzyx@vip.qq.com>"
+
+LABEL version="1.0"
+
+#系统用户
+ARG USERNAME=nriet
+
+RUN apt-get update \
+      && apt-get install -y --no-install-recommends \
+       vim sudo openssh-server gfortran; \
+    rm -rf /var/lib/apt/lists/*
+
+# 配置 SSH 服务器
+RUN mkdir /var/run/sshd
 
 RUN mkdir -p /data/FY4A/
 
 RUN mkdir -p /data/FY4A-NC/
- 
-# Install any needed packages specified in requirements.txt
-RUN pip install --trusted-host pypi.python.org -r requirements.txt && \
-	 apt-get -y update && apt-get install -y gfortran
 
+RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
 
-# Make port 80 available to the world outside this container
-#EXPOSE 80
- 
-# Define environment variable
-#ENV NAME World
+COPY requirements.txt ./
 
-CMD ["python","a0_ll2lc_fy4a.py"]
- 
-CMD ["f2py","-m","index2data","-c","index2data.f90"]
+COPY code ./
 
-# Run app.py when the container launches
-#CMD ["python", "main_decode_python.py"]
+RUN pip install --no-cache-dir -r requirements.txt
 
-#CMD ["python", "app.py"]
+# 开放 SSH 服务器端口
+EXPOSE 22
 
-
-#docker build -t fy4a .
-
-#docker run --rm -v /home/shixiutong/data/FY4A:/data/FY4A/ -v /home/shixiutong/data/FY4A-NC:/data/FY4A-NC/ -v /home/shixiutong/fy4a:/app fy4a
-
-#docker rmi fy4a
-
-#docker run -p 4000:80 fy4a
+# 启动 SSH 服务
+CMD ["/usr/sbin/sshd", "-D"]
