@@ -15,17 +15,17 @@ RUN apt-get update \
 # 配置 SSH 服务器
 RUN mkdir /var/run/sshd
 
-RUN mkdir -p /data/FY4A/
-
-RUN mkdir -p /data/FY4A-NC/
-
 RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
 
 COPY requirements.txt ./
 
-COPY code ./
+COPY code /home/code
 
 RUN pip install --no-cache-dir -r requirements.txt
+
+RUN cd /home/code/; \
+	python a0_ll2lc_fy4a.py; \
+	f2py -m index2data -c index2data.f90
 
 # 开放 SSH 服务器端口
 EXPOSE 22

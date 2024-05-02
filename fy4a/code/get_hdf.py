@@ -60,11 +60,11 @@ def get_hdf(path_in,path_out,file_in):
     if res_str=='4000M':
         res=0.04
         brands=['01','02','03','04','05','06','07','08','09','10','11','12','13','14']
-        lc_file='/home/algorithm/fy4a-2.0/FY4A_China_4km.pkl'
+        lc_file='FY4A_China_4km.pkl'
     elif res_str=='0500M':
         res=0.005
         brands=['02']
-        lc_file='/home/algorithm/fy4a-2.0/FY4A_China_500m.pkl'
+        lc_file='FY4A_China_500m.pkl'
     else:
         print('reslution error '+file_in)
     
