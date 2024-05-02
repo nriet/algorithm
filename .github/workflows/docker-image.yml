@@ -31,7 +31,6 @@ jobs:  # workflow中的job
           context: fy4a/.
           platforms: |
             linux/amd64
-            linux/arm64
           push: true
           tags: |
             nriet/fy4a:latest
