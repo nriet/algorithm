@@ -25,7 +25,7 @@ jobs:  # workflow中的job
           username: ${{ secrets.DOCKER_HUB_USER }}  # 配置dockerhub的认证，在Github项目主页 【Settings】 -> 【Secrets】 添加对应变量
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-      - name: openjdk-slim-buster
+      - name: fy4a
         uses: docker/build-push-action@v2 # docker build  & push
         with:
           context: fy4a/.
