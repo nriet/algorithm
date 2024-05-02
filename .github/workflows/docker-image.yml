@@ -30,7 +30,6 @@ jobs:  # workflow中的job
         with:
           context: fy4a/.
           platforms: |
-            linux/amd64
             linux/arm64/v8
           push: true
           tags: |
