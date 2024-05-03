@@ -9,7 +9,7 @@ ARG USERNAME=nriet
 
 RUN apt-get update \
       && apt-get install -y --no-install-recommends \
-       vim sudo gfortran; \
+       gfortran; \
     rm -rf /var/lib/apt/lists/*
 
 # 配置 SSH 服务器
