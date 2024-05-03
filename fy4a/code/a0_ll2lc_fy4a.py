@@ -16,10 +16,10 @@ pi=3.1415926535897
 
 #######################
 # China
-lon_l=0
+lon_l=30
 lon_r=180
 lat_u=80
-lat_d=0
+lat_d=-80
 
 res_s=[0.005,0.01,0.02,0.04]
 filenames=['FY4A_China_500m.pkl','FY4A_China_1km.pkl','FY4A_China_2km.pkl','FY4A_China_4km.pkl']

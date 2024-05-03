@@ -86,10 +86,10 @@ def get_hdf(path_in,path_out,file_in):
     
     nx,ny=np.shape(l)
     
-    lon_l=70
-    lon_r=140
-    lat_u=55
-    lat_d=5
+    lon_l=30
+    lon_r=180
+    lat_u=80
+    lat_d=-80
     
     lon_out=np.arange(lon_l,lon_r+0.001,res)
     lat_out=np.arange(lat_d,lat_u+0.001,res)
