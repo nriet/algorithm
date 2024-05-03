@@ -7,6 +7,8 @@ LABEL version="1.0"
 #系统用户
 ARG USERNAME=nriet
 
+RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list 
+
 RUN apt-get update \
       && apt-get install -y gfortran; \
     rm -rf /var/lib/apt/lists/*
