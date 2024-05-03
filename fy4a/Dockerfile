@@ -8,8 +8,7 @@ LABEL version="1.0"
 ARG USERNAME=nriet
 
 RUN apt-get update \
-      && apt-get install -y --no-install-recommends \
-       gfortran; \
+      && apt-get install -y gfortran; \
     rm -rf /var/lib/apt/lists/*
 
 # 配置 SSH 服务器
