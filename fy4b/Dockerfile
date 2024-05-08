@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM nriet/tomcat:8.5-jdk11-thredds
 
 LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
@@ -8,20 +8,9 @@ LABEL version="1.0"
 #ARG USERNAME=nriet
 
 # 安装必要的依赖
-# RUN apt-get update && apt-get install -y \
-#     build-essential \
-#     libffi-dev \
-#     libssl-dev \
-#     && rm -rf /var/lib/apt/lists/*
-
-RUN sed -i "s@/archive.ubuntu.com/@/mirrors.163.com/@g" /etc/apt/sources.list \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get update --fix-missing -o Acquire::http::No-Cache=True
-
-# RUN sed -i "s@/archive.ubuntu.com/@/mirrors.163.com/@g" /etc/apt/sources.list \
-#     && apt-get update \
-#     && apt-get install -y --no-install-recommends vim sudo openssh-server gfortran \
-#     && rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends vim gfortran \
+    && rm -rf /var/lib/apt/lists/*
 
 # 配置 SSH 服务器
 # RUN mkdir /var/run/sshd
