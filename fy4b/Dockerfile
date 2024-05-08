@@ -23,9 +23,10 @@ WORKDIR /opt/fy4b
 COPY . /opt/fy4b
 
 RUN pip install --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt
+    && pip pip install --no-binary=h5py h5py==2.10.0
+# && pip install --no-cache-dir -r requirements.txt
 
-# RUN pip install numpy
+# RUN pip install --no-binary=h5py h5py==2.10.0
 
 # RUN cd /home/code/; \
 # 	python a0_ll2lc_fy4a.py; \
