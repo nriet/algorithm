@@ -20,8 +20,8 @@ ARG USERNAME=nriet
 COPY requirements.txt ./
 
 COPY code /opt/fy4b
-
-RUN pip install --no-cache-dir -r requirements.txt
+ 
+RUN pip install --upgrade pip --no-cache-dir -r requirements.txt
 
 # RUN cd /home/code/; \
 # 	python a0_ll2lc_fy4a.py; \
