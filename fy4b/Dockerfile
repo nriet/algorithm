@@ -14,10 +14,10 @@ ARG USERNAME=nriet
 #     libssl-dev \
 #     && rm -rf /var/lib/apt/lists/*
 
-# RUN apt-get update \
-#       && apt-get install -y --no-install-recommends \
-#        vim sudo openssh-server gfortran; \
-#     rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+      && apt-get install -y --no-install-recommends \
+       vim sudo openssh-server gfortran; \
+    rm -rf /var/lib/apt/lists/*
 
 # 配置 SSH 服务器
 # RUN mkdir /var/run/sshd
