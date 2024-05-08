@@ -1,4 +1,5 @@
-FROM python:3.9-slim
+FROM ubuntu:latest
+
 
 LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
@@ -6,6 +7,9 @@ LABEL version="1.0"
 
 #系统用户
 ARG USERNAME=nriet
+
+# 安装Python和pip
+RUN apt-get update && apt-get install -y python3 python3-pip
 
 # 安装必要的依赖
 # RUN apt-get update && apt-get install -y \
