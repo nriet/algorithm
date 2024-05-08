@@ -22,7 +22,8 @@ WORKDIR /opt/fy4b
 
 COPY . /opt/fy4b
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
 
 # RUN pip install numpy
 
