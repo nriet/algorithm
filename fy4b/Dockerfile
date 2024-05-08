@@ -4,8 +4,6 @@ LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
 LABEL version="1.0"
 
-#系统用户
-ARG USERNAME=nriet
 
 # 安装必要的依赖
 # RUN apt-get update && apt-get install -y \
@@ -14,8 +12,7 @@ ARG USERNAME=nriet
 #     libssl-dev \
 #     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update 
 
 # 配置 SSH 服务器
 # RUN mkdir /var/run/sshd
