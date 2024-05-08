@@ -7,6 +7,13 @@ LABEL version="1.0"
 #系统用户
 ARG USERNAME=nriet
 
+# 安装必要的依赖
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libffi-dev \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
+
 # RUN apt-get update \
 #       && apt-get install -y --no-install-recommends \
 #        vim sudo openssh-server gfortran; \
