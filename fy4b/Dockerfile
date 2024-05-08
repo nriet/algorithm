@@ -24,10 +24,11 @@ ARG USERNAME=nriet
 
 # RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
 
-COPY code /opt/fy4b
+WORKDIR /opt/fy4b
 
-RUN cd /opt/fy4b; \
-    pip install --no-cache-dir -r requirements.txt
+COPY . /opt/fy4b
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 # RUN cd /home/code/; \
 # 	python a0_ll2lc_fy4a.py; \
