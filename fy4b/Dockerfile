@@ -17,8 +17,6 @@ ARG USERNAME=nriet
 
 # RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
 
-COPY requirements.txt ./
-
 COPY code /opt/fy4b
 
 RUN pip install --upgrade pip; \
