@@ -39,19 +39,19 @@ def get_hdf(path_in,path_out,file_in):
     # if res_str=='0500M':
         # res=0.005
         # brands=['02']
-        # lc_file='FY4A_China_500m.pkl'
+        # lc_file='500m.pkl'
     # elif res_str=='1000M':
         # res=0.01
         # brands=['01','03']
-        # lc_file='FY4A_China_1km.pkl'
+        # lc_file='1km.pkl'
     # elif res_str=='2000M':
         # res=0.02
         # brands=['04','05','06','07']
-        # lc_file='FY4A_China_2km.pkl'
+        # lc_file='2km.pkl'
     # elif res_str=='4000M':
         # res=0.04
         # brands=['08','09','10','11','12','13','14']
-        # lc_file='FY4A_China_4km.pkl'
+        # lc_file='4km.pkl'
     # else:
         # print('reslution error '+file_in)
         # break
@@ -60,23 +60,21 @@ def get_hdf(path_in,path_out,file_in):
     if res_str=='4000M':
         res=0.04
         brands=['01','02','03','04','05','06','07','08','09','10','11','12','13','14']
-        lc_file='FY4A_China_4km.pkl'
+        lc_file='4km.pkl'
     elif res_str=='0500M':
         res=0.005
         brands=['02']
-        lc_file='FY4A_China_500m.pkl'
+        lc_file='500m.pkl'
     elif res_str=='1000M':
         res=0.01
         brands=['01','02','03']
-        lc_file='FY4A_China_1km.pkl'
+        lc_file='1km.pkl'
     elif res_str=='2000M':
         res=0.02
         brands=['01','02','03','04','05','06','07','08']
-        lc_file='FY4A_China_2km.pkl'
+        lc_file='2km.pkl'
     else:
         print('reslution error '+file_in)
-    
-    print('lc_file:'+lc_file)
     
     pkl_file=open(lc_file,'rb')
     lc_info=pickle.load(pkl_file)
@@ -86,10 +84,10 @@ def get_hdf(path_in,path_out,file_in):
     
     nx,ny=np.shape(l)
     
-    lon_l=30
-    lon_r=180
-    lat_u=80
-    lat_d=-80
+    lon_l=70
+    lon_r=140
+    lat_u=55
+    lat_d=5
     
     lon_out=np.arange(lon_l,lon_r+0.001,res)
     lat_out=np.arange(lat_d,lat_u+0.001,res)

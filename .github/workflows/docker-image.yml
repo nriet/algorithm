@@ -25,16 +25,16 @@ jobs:  # workflow中的job
           username: ${{ secrets.DOCKER_HUB_USER }}  # 配置dockerhub的认证，在Github项目主页 【Settings】 -> 【Secrets】 添加对应变量
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-      - name: fy4a
+      - name: fy4b
         uses: docker/build-push-action@v2 # docker build  & push
         with:
-          context: fy4a/.
+          context: fy4b/.
           platforms: |
-            linux/arm64
+            linux/amd64
           push: true
           tags: |
-            nriet/fy4a:latest
-            nriet/fy4a:python3.9-slim
+            nriet/fy4b:latest
+            nriet/fy4b:python3.9-slim
 
       # - name: algorithm:sedes-python3
       #   uses: docker/build-push-action@v2 # docker build  & push

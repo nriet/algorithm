@@ -16,13 +16,13 @@ pi=3.1415926535897
 
 #######################
 # China
-lon_l=30
-lon_r=180
-lat_u=80
-lat_d=-80
+lon_l=70
+lon_r=140
+lat_u=55
+lat_d=5
 
 res_s=[0.005,0.01,0.02,0.04]
-filenames=['FY4A_China_500m.pkl','FY4A_China_1km.pkl','FY4A_China_2km.pkl','FY4A_China_4km.pkl']
+filenames=['500m.pkl','1km.pkl','2km.pkl','4km.pkl']
 
 for i in np.arange(0,4):
     res=res_s[i]
