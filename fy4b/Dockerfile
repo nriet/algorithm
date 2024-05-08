@@ -5,7 +5,7 @@ LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 LABEL version="1.0"
 
 #系统用户
-ARG USERNAME=nriet
+#ARG USERNAME=nriet
 
 # 安装必要的依赖
 # RUN apt-get update && apt-get install -y \
@@ -17,7 +17,7 @@ ARG USERNAME=nriet
 RUN sed -i "s@/archive.ubuntu.com/@/mirrors.163.com/@g" /etc/apt/sources.list \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get update --fix-missing -o Acquire::http::No-Cache=True
-    
+
 # RUN sed -i "s@/archive.ubuntu.com/@/mirrors.163.com/@g" /etc/apt/sources.list \
 #     && apt-get update \
 #     && apt-get install -y --no-install-recommends vim sudo openssh-server gfortran \
