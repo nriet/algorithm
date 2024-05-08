@@ -30,7 +30,7 @@ jobs:  # workflow中的job
         with:
           context: fy4b/.
           platforms: |
-            linux/arm64/v8
+            linux/arm64
           push: true
           tags: |
             nriet/fy4b:latest
