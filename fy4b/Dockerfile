@@ -1,5 +1,4 @@
-FROM ubuntu:latest
-
+FROM python:3.9-slim
 
 LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
@@ -7,9 +6,6 @@ LABEL version="1.0"
 
 #系统用户
 ARG USERNAME=nriet
-
-# 安装Python和pip
-RUN apt-get update && apt-get install -y python3 python3-pip
 
 # 安装必要的依赖
 # RUN apt-get update && apt-get install -y \
@@ -32,7 +28,9 @@ WORKDIR /opt/fy4b
 
 COPY . /opt/fy4b
 
-RUN pip install --no-cache-dir -r requirements.txt
+# RUN pip install --no-cache-dir -r requirements.txt
+
+RUN pip install h5py
 
 # RUN cd /home/code/; \
 # 	python a0_ll2lc_fy4a.py; \
