@@ -30,7 +30,7 @@ COPY . /opt/fy4b
 
 # RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install numpy
+# RUN pip install numpy
 
 # RUN cd /home/code/; \
 # 	python a0_ll2lc_fy4a.py; \
