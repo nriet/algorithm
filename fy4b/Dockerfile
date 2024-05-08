@@ -23,7 +23,7 @@ WORKDIR /opt/fy4b
 COPY . /opt/fy4b
 
 RUN pip install --upgrade pip \
-    && pip pip install --no-binary=h5py h5py==2.10.0
+    && pip install --no-binary=h5py h5py==2.10.0
 # && pip install --no-cache-dir -r requirements.txt
 
 # RUN pip install --no-binary=h5py h5py==2.10.0
