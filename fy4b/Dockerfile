@@ -1,4 +1,4 @@
-FROM python:3.9-buster
+FROM python:3.8-buster
 
 LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
