@@ -13,5 +13,6 @@ ENV LD_LIBRARY_PATH :/app/NWP_PL_V${NWP_PL_VERSION}/lib
 RUN apt-get update \
       && apt-get install -y --no-install-recommends \
         gdal-bin libgdal-dev libnetcdf-dev; \
+        tar zxvf /app.tar.gz -C /; \
+        rm -rf /app.tar.gz; \
     rm -rf /var/lib/apt/lists/*
-
