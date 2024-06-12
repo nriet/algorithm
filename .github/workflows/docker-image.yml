@@ -33,17 +33,29 @@ jobs:
         # name: Generate App Version
         # run: echo APP_VERSION=`git describe --tags --always` >> $GITHUB_ENV
 
-      - name: fy4b
+      - name: NWP
         uses: docker/build-push-action@v2 # docker build  & push
         with:
-          context: fy4b/.
+          context: NWP/.
           platforms: |
             linux/amd64
             linux/arm64
           push: true
           tags: |
-            nriet/fy4b:latest
-            nriet/fy4b:python3.9-slim
+            nriet/NWP:latest
+            nriet/NWP:1.0
+            
+      # - name: fy4b
+      #   uses: docker/build-push-action@v2 # docker build  & push
+      #   with:
+      #     context: fy4b/.
+      #     platforms: |
+      #       linux/amd64
+      #       linux/arm64
+      #     push: true
+      #     tags: |
+      #       nriet/fy4b:latest
+      #       nriet/fy4b:python3.9-slim
 
       # - name: algorithm:sedes-python3
       #   uses: docker/build-push-action@v2 # docker build  & push
