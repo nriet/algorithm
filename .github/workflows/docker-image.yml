@@ -40,6 +40,8 @@ jobs:
           platforms: |
             linux/amd64
           push: true
+          build-args: |
+            ARCH=${{ steps.get_arch.outputs.arch }}
           tags: |
             ${{ env.DOCKERHUB_REPO }}:nwp
             
