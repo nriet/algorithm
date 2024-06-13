@@ -2,23 +2,13 @@ FROM centos:centos7.9.2009
 
 MAINTAINER Axiu <itzyx@vip.qq.com>
 
-# 接收从 GitHub Actions 中传递过来的架构信息
-ARG ARCH
-
-# 设置环境变量
-ENV ARCH=${ARCH}
-
-# 示例命令，显示架构信息
-RUN echo "The architecture is $ARCH"
-
-
 ENV NWP_VERSION 1.0
 
 ENV GRIB_DEFINITION_PATH /app/NWP/definitions
 
 ENV LD_LIBRARY_PATH :/app/NWP/lib
 
-ENV NWP_URL https://github.com/nriet/algorithm/releases/download/NWPConvert4.0/NWP-$ARCH.zip
+ENV NWP_URL https://github.com/nriet/algorithm/releases/download/NWPConvert4.0/NWP-x86_64.zip
 
 RUN set -eux; \
 	\
