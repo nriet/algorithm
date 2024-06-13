@@ -2,6 +2,8 @@ FROM centos:centos7.9.2009
 
 MAINTAINER Axiu <itzyx@vip.qq.com>
 
+WORKDIR /app/NWP
+
 ENV NWP_VERSION 1.0
 
 ENV GRIB_DEFINITION_PATH /app/NWP/definitions
@@ -18,6 +20,7 @@ RUN set -eux; \
 	\
 	wget -O NWP.zip "${NWP_URL}" --no-check-certificate; \
 	unzip -oq NWP.zip -d /app; \
+  chmod +x /app/NWP/NWPConvert; \
 	rm -rf NWP.zip
 
 RUN ldd /app/NWP/NWPConvert
