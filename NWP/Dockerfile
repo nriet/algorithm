@@ -20,6 +20,7 @@ RUN set -eux; \
 	unzip -oq NWP.zip -d /app; \
 	rm -rf NWP.zip
 
+RUN ldd /app/NWP/NWPConvert
 
 # RUN apt-get update \
 #       && apt-get install -y --no-install-recommends \
