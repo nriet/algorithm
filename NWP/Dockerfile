@@ -2,6 +2,9 @@ FROM centos:centos7.9.2009
 
 MAINTAINER Axiu <itzyx@vip.qq.com>
 
+# 接收从 GitHub Actions 中传递过来的架构信息
+ARG ARCH
+
 # 设置环境变量
 ENV ARCH=${ARCH}
 
