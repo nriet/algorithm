@@ -36,8 +36,7 @@ jobs:
       - name: NWP
         uses: docker/build-push-action@v2 # docker build  & push
         with:
-          context: NWP/.
-          file: Dockerfile.arm64
+          file: NWP/Dockerfile.arm64
           platforms: |
             linux/arm64
           push: true
