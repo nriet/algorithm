@@ -10,9 +10,9 @@ ENV LD_LIBRARY_PATH :/app/NWP/lib
 
 ENV NWP_URL https://github.com/nriet/algorithm/releases/download/NWPConvert4.0/NWP-x86_64.zip
 
-RUN yum update \
-      && yum install -y wget unzip; \
-        yum clean all
+RUN yum update -y && \
+    yum install -y wget unzip && \
+    yum clean all
 
 RUN set -eux; \
 	\
