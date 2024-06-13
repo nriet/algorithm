@@ -3,12 +3,11 @@ FROM centos:centos7.9.2009
 MAINTAINER Axiu <itzyx@vip.qq.com>
 
 # 运行命令来获取系统架构并设置为环境变量
-RUN arch > /tmp/arch && \
-    export ARCH=$(cat /tmp/arch) && \
-    echo "Architecture: $ARCH"
+RUN arch > /tmp/arch
 
-# 将系统架构设置为环境变量
+# 将系统架构读取到环境变量
 ARG ARCH
+RUN export ARCH=$(cat /tmp/arch) && echo "Architecture: $ARCH"
 ENV ARCH=${ARCH:-$(cat /tmp/arch)}
 
 # 清理临时文件
