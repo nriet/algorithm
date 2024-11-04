@@ -20,7 +20,7 @@ RUN set -eux; \
 	\
 	wget -O NWP.zip "${NWP_URL}" --no-check-certificate; \
 	unzip -oq NWP.zip -d /app; \
-  chmod +x /app/NWP/NWPConvert; \
+  chmod +x /app/NWP/*; \
 	rm -rf NWP.zip
 
 RUN ldd /app/NWP/NWPConvert
