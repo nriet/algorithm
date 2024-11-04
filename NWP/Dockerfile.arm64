@@ -20,6 +20,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     curl -fSL "${NWP_URL}" -o NWP.zip && \
     unzip NWP.zip -d /app && \
+    chmod +x /app/NWP/NWPConvert && \
     rm -f NWP.zip
 
 
