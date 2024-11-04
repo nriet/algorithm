@@ -14,7 +14,7 @@ ENV NWP_URL https://github.com/nriet/algorithm/releases/download/NWPConvert4.0/N
 
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends vim build-essential libhdf5-dev zlib1g-dev libnetcdf-dev curl libcurl4-openssl-dev zip unzip libopenjp* && \
+    apt-get install -y --no-install-recommends vim build-essential libhdf5-dev zlib1g-dev curl libcurl4-openssl-dev zip unzip && \
     # Cleanup
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
