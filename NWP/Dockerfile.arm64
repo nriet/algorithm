@@ -12,17 +12,16 @@ ENV LD_LIBRARY_PATH :/app/NWP/lib
 
 ENV NWP_URL https://github.com/nriet/algorithm/releases/download/NWPConvert4.0/NWP-arm64.zip
 
-RUN apt-get update -y && \
-apt-get install -y wget unzip hdf5 openjpeg && \
-apt-get clean all
 
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends vim build-essential libhdf5-dev zlib1g-dev libnetcdf-dev libcurl4-openssl-dev zip unzip && \
+    # Cleanup
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* && \
+    curl -fSL "${NWP_URL}" -o NWP.zip && \
+    unzip NWP.zip -d /app && \
+    rm -f NWP.zip
 
-RUN set -eux; \
-	\
-	wget -O NWP.zip "${NWP_URL}" --no-check-certificate; \
-	unzip -oq NWP.zip -d /app; \
-  chmod +x /app/NWP/*; \
-	rm -rf NWP.zip
 
 RUN ldd /app/NWP/NWPConvert
 
