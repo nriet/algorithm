@@ -12,9 +12,10 @@ ENV LD_LIBRARY_PATH :/app/NWP/lib
 
 ENV NWP_URL https://github.com/nriet/algorithm/releases/download/NWPConvert4.0/NWP-arm64.zip
 
-RUN yum install -y epel-release && yum update -y && \
+RUN yum update -y && \
     yum install -y wget unzip hdf5 openjpeg && \
     yum clean all
+
 
 RUN set -eux; \
 	\
