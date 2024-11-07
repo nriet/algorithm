@@ -1,5 +1,5 @@
 h5py==3.10.0
-numpy
+numpy==1.26.4
 netCDF4==1.6.5
 xarray
 matplotlib
