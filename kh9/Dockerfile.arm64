@@ -6,6 +6,8 @@ WORKDIR /app/hisd2netcdf
 
 COPY ./kh9/hisd2netcdf_arm.tar.gz /app
 
+ENV LD_LIBRARY_PATH :/app/hisd2netcdf
+
 RUN apt-get update && \
     apt-get install -y --no-install-recommends vim build-essential libhdf5-dev zlib1g-dev libnetcdf-dev libcurl4-openssl-dev && \
     # Cleanup
