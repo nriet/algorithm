@@ -11,10 +11,9 @@ RUN apt-get update && \
     # Cleanup
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
-    tar zxvf /app/hisd2netcdf_arm.tar.gz && \
-    ls -l /app/hisd2netcdf/hisd2netcdf && \
+    tar zxvf /app/hisd2netcdf_arm.tar.gz -C /app && \
     chmod +x /app/hisd2netcdf/hisd2netcdf && \
-    rm -f hisd2netcdf_arm.tar.gz
+    rm -f /app/hisd2netcdf_arm.tar.gz
 
 
 RUN ldd /app/hisd2netcdf/hisd2netcdf
