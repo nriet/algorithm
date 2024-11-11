@@ -43,17 +43,27 @@ jobs:
       #     tags: |
       #       ${{ env.DOCKERHUB_REPO }}:nwp4.0
             
-      - name: fy4b
+      - name: kh9
         uses: docker/build-push-action@v2 # docker build  & push
         with:
-          context: fy4b/.
+          file: NWP/Dockerfile.arm64
           platforms: |
-            linux/amd64
             linux/arm64
           push: true
           tags: |
-            nriet/fy4b:latest
-            nriet/fy4b:python3.9-slim-v1
+            ${{ env.DOCKERHUB_REPO }}:kh9
+
+      # - name: fy4b
+      #   uses: docker/build-push-action@v2 # docker build  & push
+      #   with:
+      #     context: fy4b/.
+      #     platforms: |
+      #       linux/amd64
+      #       linux/arm64
+      #     push: true
+      #     tags: |
+      #       nriet/fy4b:latest
+      #       nriet/fy4b:python3.9-slim-v1
 
       # - name: algorithm:sedes-python3
       #   uses: docker/build-push-action@v2 # docker build  & push
