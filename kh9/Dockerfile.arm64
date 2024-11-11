@@ -7,11 +7,10 @@ WORKDIR /app/hisd2netcdf
 COPY hisd2netcdf_arm.tar.gz /app/hisd2netcdf
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends vim build-essential libhdf5-dev zlib1g-dev libnetcdf-dev libcurl4-openssl-dev zip unzip && \
+    apt-get install -y --no-install-recommends vim build-essential libhdf5-dev zlib1g-dev libnetcdf-dev libcurl4-openssl-dev && \
     # Cleanup
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
-    curl -fSL "${NWP_URL}" -o NWP.zip && \
     tar zxvf hisd2netcdf_arm.tar.gz && \
     chmod +x /app/hisd2netcdf/hisd2netcdf && \
     rm -f hisd2netcdf_arm.tar.gz

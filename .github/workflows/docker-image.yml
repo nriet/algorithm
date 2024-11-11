@@ -46,7 +46,7 @@ jobs:
       - name: kh9
         uses: docker/build-push-action@v2 # docker build  & push
         with:
-          file: NWP/Dockerfile.arm64
+          file: kh9/Dockerfile.arm64
           platforms: |
             linux/arm64
           push: true
