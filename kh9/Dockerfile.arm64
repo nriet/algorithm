@@ -4,14 +4,14 @@ MAINTAINER Axiu <itzyx@vip.qq.com>
 
 WORKDIR /app/hisd2netcdf
 
-COPY ./kh9/hisd2netcdf_arm.tar.gz /app/hisd2netcdf
+COPY ./kh9/hisd2netcdf_arm.tar.gz /app
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends vim build-essential libhdf5-dev zlib1g-dev libnetcdf-dev libcurl4-openssl-dev && \
     # Cleanup
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
-    tar zxvf hisd2netcdf_arm.tar.gz && \
+    tar zxvf /app/hisd2netcdf_arm.tar.gz && \
     chmod +x /app/hisd2netcdf/hisd2netcdf && \
     rm -f hisd2netcdf_arm.tar.gz
 
