@@ -53,16 +53,27 @@ jobs:
       #     tags: |
       #       ${{ env.DOCKERHUB_REPO }}:kh9
 
-      - name: metpy-tlnp
+      # - name: metpy-tlnp
+      #   uses: docker/build-push-action@v2 # docker build  & push
+      #   with:
+      #     context: metpy-tlnp/.
+      #     platforms: |
+      #       linux/amd64
+      #       linux/arm64
+      #     push: true
+      #     tags: |
+      #       ${{ env.DOCKERHUB_REPO }}:metpy-tlnp
+      
+      - name: station-pykrige
         uses: docker/build-push-action@v2 # docker build  & push
         with:
-          context: metpy-tlnp/.
+          context: station-pykrige/.
           platforms: |
             linux/amd64
             linux/arm64
           push: true
           tags: |
-            ${{ env.DOCKERHUB_REPO }}:metpy-tlnp
+            ${{ env.DOCKERHUB_REPO }}:station-pykrige
 
       # - name: fy4b
       #   uses: docker/build-push-action@v2 # docker build  & push
