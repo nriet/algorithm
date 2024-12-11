@@ -64,16 +64,16 @@ jobs:
       #     tags: |
       #       ${{ env.DOCKERHUB_REPO }}:metpy-tlnp
       
-      - name: station-pykrige
-        uses: docker/build-push-action@v2 # docker build  & push
-        with:
-          context: station-pykrige/.
-          platforms: |
-            linux/amd64
-            linux/arm64
-          push: true
-          tags: |
-            ${{ env.DOCKERHUB_REPO }}:station-pykrige
+      # - name: station-pykrige
+      #   uses: docker/build-push-action@v2 # docker build  & push
+      #   with:
+      #     context: station-pykrige/.
+      #     platforms: |
+      #       linux/amd64
+      #       linux/arm64
+      #     push: true
+      #     tags: |
+      #       ${{ env.DOCKERHUB_REPO }}:station-pykrige
 
       # - name: fy4b
       #   uses: docker/build-push-action@v2 # docker build  & push
@@ -126,3 +126,12 @@ jobs:
       #     context: ncl/.
       #     push: true
       #     tags: nriet/algorithm:centos7.9.2009-ncl
+      - name: TQRadarMap
+        uses: docker/build-push-action@v2 # docker build  & push
+        with:
+          file: TQRadarMap/Dockerfile.arm64
+          platforms: |
+            linux/arm64
+          push: true
+          tags: |
+            ${{ env.DOCKERHUB_REPO }}:openeuler_24.03
