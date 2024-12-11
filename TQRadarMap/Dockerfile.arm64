@@ -3,7 +3,7 @@ FROM registry.cn-hangzhou.aliyuncs.com/nriet/algorithm:tqradarmap_openeuler_24.0
 
 MAINTAINER Axiu <itzyx@vip.qq.com>
 
-WORKDIR /app/TQRadarMap
+WORKDIR /app/TQRadarMap/dist/bin
 
 COPY ./TQRadarMap/TQRadarMap_arm64/ /app/TQRadarMap
 
