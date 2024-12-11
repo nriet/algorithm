@@ -4,7 +4,7 @@ MAINTAINER Axiu <itzyx@vip.qq.com>
 
 WORKDIR /app/TQRadarMap
 
-COPY ./TQRadarMap_arm64/ /app/TQRadarMap
+COPY ./TQRadarMap/TQRadarMap_arm64/ /app/TQRadarMap
 
 
 
