@@ -134,4 +134,4 @@ jobs:
             linux/arm64
           push: true
           tags: |
-            ${{ env.DOCKERHUB_REPO }}:openeuler_24.03
+            ${{ env.DOCKERHUB_REPO }}:tqradarmap_openeuler_24.03

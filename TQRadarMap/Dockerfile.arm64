@@ -1,4 +1,5 @@
-FROM openeuler/openeuler:24.03
+# FROM openeuler/openeuler:24.03
+FROM registry.cn-hangzhou.aliyuncs.com/nriet/algorithm:tqradarmap_openeuler_24.03_linux_arm64
 
 MAINTAINER Axiu <itzyx@vip.qq.com>
 
