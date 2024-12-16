@@ -9,7 +9,7 @@ ENV LD_LIBRARY_PATH /app/TQRadarMap/lib:$LD_LIBRARY_PATH
 
 ENV QMAKE_SPEC linux-g++
 
-COPY ./TQRadarMap/TQRadarMap_arm64/dist/ /app/TQRadarMap
+COPY ./TQRadarMap/TQRadarMap_arm64/ /app/TQRadarMap
 
 
 RUN ldd Algo_QC

@@ -1,35 +1,17 @@
-FROM centos:centos7.9.2009
+FROM openeuler/openeuler:24.03
+#FROM registry.cn-hangzhou.aliyuncs.com/nriet/algorithm:tqradarmap_openeuler_24.03_linux_arm64
 
 MAINTAINER Axiu <itzyx@vip.qq.com>
 
-WORKDIR /app/NWP
+WORKDIR /app/TQRadarMap/bin
 
-ENV NWP_VERSION 1.0
+ENV LD_LIBRARY_PATH /app/TQRadarMap/lib:$LD_LIBRARY_PATH
 
-ENV GRIB_DEFINITION_PATH /app/NWP/definitions
+ENV QMAKE_SPEC linux-g++
 
-ENV LD_LIBRARY_PATH :/app/NWP/lib
-
-ENV NWP_URL https://github.com/nriet/algorithm/releases/download/NWPConvert4.0/NWP-x86_64.zip
-
-RUN yum update -y && \
-    yum install -y wget unzip && \
-    yum clean all
-
-RUN set -eux; \
-	\
-	wget -O NWP.zip "${NWP_URL}" --no-check-certificate; \
-	unzip -oq NWP.zip -d /app; \
-  chmod +x /app/NWP/NWPConvert; \
-	rm -rf NWP.zip
-
-RUN ldd /app/NWP/NWPConvert
-
-# RUN apt-get update \
-#       && apt-get install -y --no-install-recommends \
-#         gdal-bin libgdal-dev libnetcdf-dev; \
-#     rm -rf /var/lib/apt/lists/*
+COPY ./TQRadarMap/TQRadarMap_x86/ /app/TQRadarMap
 
 
-
-
+RUN ldd Algo_QC
+RUN ldd Algo_PPIS
+RUN ldd Algo_CAPPI_Grid
