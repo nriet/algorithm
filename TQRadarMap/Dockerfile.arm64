@@ -12,6 +12,8 @@ ENV QMAKE_SPEC linux-g++
 COPY ./TQRadarMap/TQRadarMap_arm64/ /app/TQRadarMap
 
 
-RUN ldd Algo_QC
-RUN ldd Algo_PPIS
-RUN ldd Algo_CAPPI_Grid
+# RUN ldd Algo_QC
+# RUN ldd Algo_PPIS
+# RUN ldd Algo_CAPPI_Grid
+
+RUN ldd Algo_ReflectivityS
