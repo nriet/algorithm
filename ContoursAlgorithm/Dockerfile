@@ -9,6 +9,8 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends vim sudo curl \
     && rm -rf /var/lib/apt/lists/*
 
+RUN bash -c "npm install -g npm@11.4.2"
+
 # 安装 nvm
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
