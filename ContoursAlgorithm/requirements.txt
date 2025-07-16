@@ -1,4 +1,3 @@
 xarray
 numpy
-json
 subprocess
