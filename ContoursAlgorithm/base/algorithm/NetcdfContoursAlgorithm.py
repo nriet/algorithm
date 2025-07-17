@@ -9,7 +9,6 @@ def extract_variable_data(nc_file_path, variable_name, level):
     # 打开 NetCDF 文件
     ds = xr.open_dataset(nc_file_path)
     
-    eto2m = ds['ETO2M']
     # 提取指定变量，并根据高度层进行选择
     if level is not None:
         data = ds[variable_name].isel(level=level)  # 根据高度层选择数据
@@ -23,8 +22,8 @@ def extract_variable_data(nc_file_path, variable_name, level):
     data_values = data.values
     
     # 获取经纬度信息
-    lats = ds['g0_lat_0'].values
-    lons = ds['g0_lon_0'].values
+    lats = ds['lat'].values
+    lons = ds['lon'].values
     
     return data_values, lats, lons
 
