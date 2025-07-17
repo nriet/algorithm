@@ -28,7 +28,7 @@ RUN bash -c "source /root/.bashrc && nvm install $NODE_VERSION"
 # 验证安装
 RUN bash -c "source /root/.bashrc && node -v && npm -v"
 
-RUN bash -c "npm install -g npm@11.4.2"
+#RUN bash -c "npm install -g npm@11.4.2"
 
 WORKDIR /opt/ContoursAlgorithm
 
