@@ -26,7 +26,7 @@ RUN echo "export NVM_DIR=\"$NVM_DIR\"" >> /root/.bashrc && \
 RUN bash -c "source /root/.bashrc && nvm install $NODE_VERSION"
 
 # 验证安装
-RUN bash -c "source /root/.bashrc && node -v && npm -v && npm install -g npm@11.4.2 && npm install d3-contour"
+RUN bash -c "source /root/.bashrc && node -v && npm -v && npm cache clean --force && npm install -g npm@11.4.2 && npm install d3-contour"
 
 #RUN bash -c "npm install -g npm@11.4.2"
 
