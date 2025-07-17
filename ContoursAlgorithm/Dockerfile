@@ -25,10 +25,10 @@ RUN echo "export NVM_DIR=\"$NVM_DIR\"" >> /root/.bashrc && \
 # 使用 bash 执行安装 Node.js
 RUN bash -c "source /root/.bashrc && nvm install $NODE_VERSION"
 
-RUN bash -c "npm install -g npm@11.4.2"
-
 # 验证安装
 RUN bash -c "source /root/.bashrc && node -v && npm -v"
+
+RUN bash -c "npm install -g npm@11.4.2"
 
 WORKDIR /opt/ContoursAlgorithm
 
