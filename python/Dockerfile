@@ -22,9 +22,10 @@ RUN apt-get update \
 # RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
 
 #指定python工作目录
-WORKDIR /opt/python_algorithm
 
-COPY . /opt/python_algorithm
+WORKDIR /opt/python
+
+COPY . /opt/python
 
 RUN pip install --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
