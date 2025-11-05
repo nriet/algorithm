@@ -135,12 +135,22 @@ jobs:
       #     push: true
       #     tags: |
       #       ${{ env.DOCKERHUB_REPO }}:tqradarmap_openeuler_24.03
-      - name: algorithm:contoursalgorithm
+      # - name: algorithm:contoursalgorithm
+      #   uses: docker/build-push-action@v2 # docker build  & push
+      #   with:
+      #     context: ContoursAlgorithm/.
+      #     platforms: |
+      #       linux/amd64
+      #       linux/arm64
+      #     push: true
+      #     tags: nriet/algorithm:contoursalgorithm
+      - name: python
         uses: docker/build-push-action@v2 # docker build  & push
         with:
-          context: ContoursAlgorithm/.
+          file: python/Dockerfile
           platforms: |
             linux/amd64
             linux/arm64
           push: true
-          tags: nriet/algorithm:contoursalgorithm
+          tags: |
+            ${{ env.DOCKERHUB_REPO }}:python3.9-slim-v1
