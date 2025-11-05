@@ -28,7 +28,7 @@ WORKDIR /opt/python
 COPY requirements.txt /opt/python/
 
 RUN pip install --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt
+    && pip install --no-cache-dir -r /opt/python/requirements.txt
 
 # RUN pip install --no-binary=h5py h5py==2.10.0
 
