@@ -23,10 +23,9 @@ RUN apt-get update \
 
 #指定python工作目录
 
-# WORKDIR /opt/python
+WORKDIR /opt/python
 
-# COPY . /opt/python
-COPY requirements.txt ./
+COPY requirements.txt /opt/python/
 
 RUN pip install --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
