@@ -6,4 +6,4 @@ matplotlib
 scipy
 pandas
 metpy
-
+scipy
