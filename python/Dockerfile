@@ -5,6 +5,8 @@ LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
 LABEL version="1.0"
 
+WORKDIR /app
+
 #系统用户
 ARG USERNAME=nriet
 
@@ -18,15 +20,9 @@ RUN mkdir /var/run/sshd
 
 RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
 
-# 设置工作目录
-WORKDIR /app
+COPY requirements.txt ./
 
-# 复制依赖文件并安装
-# 复制应用代码
-COPY . .
-
-RUN pip install --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # 开放 SSH 服务器端口
 EXPOSE 22
