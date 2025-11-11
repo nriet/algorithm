@@ -1,5 +1,5 @@
 # 使用官方轻量级Python基础镜像
-FROM python:3.9-slim
+FROM python:3.12-slim
 
 LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
@@ -8,7 +8,7 @@ LABEL version="1.0"
 WORKDIR /app
 
 #系统用户
-ARG USERNAME=nriet
+USER root
 
 RUN apt-get update \
       && apt-get install -y --no-install-recommends \
@@ -19,6 +19,9 @@ RUN apt-get update \
 RUN mkdir /var/run/sshd
 
 RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
+
+#系统用户
+#ARG USERNAME=nriet
 
 COPY requirements.txt ./
 
