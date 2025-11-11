@@ -8,7 +8,7 @@ LABEL version="1.0"
 WORKDIR /app
 
 #系统用户
-USER root
+#USER root
 
 RUN apt-get update \
       && apt-get install -y --no-install-recommends \
