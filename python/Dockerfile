@@ -8,7 +8,7 @@ LABEL version="1.0"
 WORKDIR /app
 
 #系统用户
-#USER root
+ARG USERNAME=root
 
 RUN apt-get update \
       && apt-get install -y --no-install-recommends \
@@ -21,7 +21,6 @@ RUN mkdir /var/run/sshd
 RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
 
 #系统用户
-#ARG USERNAME=nriet
 
 COPY requirements.txt ./
 
