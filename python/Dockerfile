@@ -5,6 +5,8 @@ LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
 LABEL version="1.0"
 
+WORKDIR /app
+
 #系统用户
 ARG USERNAME=nriet
 
@@ -14,11 +16,10 @@ RUN apt-get update \
     rm -rf /var/lib/apt/lists/*
 
 # 配置 SSH 服务器
-RUN mkdir /var/run/sshd
+RUN mkdir -p /var/run/sshd
 
 RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
 
-WORKDIR /app
 
 COPY requirements.txt ./
 
