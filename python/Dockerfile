@@ -20,7 +20,8 @@ RUN mkdir -p /var/run/sshd
 
 RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
 
-COPY . .
+# 复制依赖文件并安装
+COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
