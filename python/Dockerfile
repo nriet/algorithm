@@ -1,4 +1,5 @@
-FROM python:3.9-slim
+# 使用官方轻量级Python基础镜像
+FROM python:3.12-slim
 
 LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
@@ -16,6 +17,8 @@ RUN apt-get update \
 RUN mkdir /var/run/sshd
 
 RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config   # 允许 root 用户远程登录
+
+WORKDIR /app
 
 COPY requirements.txt ./
 
