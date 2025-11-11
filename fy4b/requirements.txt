@@ -4,3 +4,4 @@ netCDF4==1.6.5
 xarray
 matplotlib
 scipy
+pandas

@@ -153,4 +153,4 @@ jobs:
             linux/arm64
           push: true
           tags: |
-            ${{ env.DOCKERHUB_REPO }}:python3.9-slim-v1
+            ${{ env.DOCKERHUB_REPO }}:python3.12-slim-v1
