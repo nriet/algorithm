@@ -1,5 +1,5 @@
 # 使用官方轻量级Python基础镜像
-FROM python:3.12-slim
+FROM python:3.9-slim
 
 LABEL maintainer="Axiu <itzyx@vip.qq.com>"
 
