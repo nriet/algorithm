@@ -7,4 +7,3 @@ scipy
 pandas
 metpy
 scipy
-opencd
