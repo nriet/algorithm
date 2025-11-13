@@ -11,9 +11,9 @@ WORKDIR /app
 ARG USERNAME=nriet
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        vim sudo openssh-server libgl1 libsm6 libxext6 libxrender1 \
+        vim sudo openssh-server libgl1 libsm6 libxext6 libxrender1 libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
-
+    
 # 配置 SSH 服务器
 RUN mkdir -p /var/run/sshd
 
@@ -24,6 +24,8 @@ COPY requirements.txt .
 
 RUN pip install --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
+
+RUN python -c "import cv2; print(cv2.__version__)"
 
 # 开放 SSH 服务器端口
 EXPOSE 22
