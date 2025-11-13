@@ -7,3 +7,4 @@ scipy
 pandas
 metpy
 scipy
+opencv-python
