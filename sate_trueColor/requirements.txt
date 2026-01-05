@@ -1,5 +1,5 @@
-h5py
-netCDF4==1.6.5
+h5py==3.14.0
+netCDF4==1.7.2
 xarray
 matplotlib
 scipy
