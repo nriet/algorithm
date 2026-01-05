@@ -144,12 +144,21 @@ jobs:
       #       linux/arm64
       #     push: true
       #     tags: nriet/algorithm:contoursalgorithm
-      - name: python
+      # - name: python
+      #   uses: docker/build-push-action@v2 # docker build  & push
+      #   with:
+      #     context: python/.
+      #     platforms: |
+      #       linux/arm64
+      #     push: true
+      #     tags: |
+      #       ${{ env.DOCKERHUB_REPO }}:python3.9-slim-v1
+      - name: sate_trueColor
         uses: docker/build-push-action@v2 # docker build  & push
         with:
-          context: python/.
+          context: sate_trueColor/.
           platforms: |
             linux/arm64
           push: true
           tags: |
-            ${{ env.DOCKERHUB_REPO }}:python3.9-slim-v1
+            ${{ env.DOCKERHUB_REPO }}:python3.12-sate-trueColor

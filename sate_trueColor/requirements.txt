@@ -1,0 +1,13 @@
+h5py==3.10.0
+netCDF4==1.6.5
+xarray
+matplotlib
+scipy
+metpy
+opencv-python
+numpy==2.3.0
+pandas==2.3.0
+dataset==1.6.2
+pyyaml==6.0.2
+platformdirs==4.5.1
+bleach==6.3.0
